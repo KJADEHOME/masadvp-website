@@ -1,0 +1,115 @@
+import Link from "next/link";
+import { Header, Footer, ProductGrid } from "./components";
+import { capabilities, heroSlides } from "./site-data";
+
+export default function HomePage() {
+  return (
+    <div className="site-shell">
+      <Header active="Home" />
+      <main>
+        <section className="hero" aria-label="MASA Development International">
+          <div className="hero-grid">
+            {heroSlides.map((slide) => (
+              <div
+                className="hero-slide"
+                key={slide.image}
+                style={{ "--image": `url(${slide.image})` }}
+                role="img"
+                aria-label={slide.alt}
+              />
+            ))}
+          </div>
+          <div className="hero-content">
+            <div className="hero-copy">
+              <h1>Toy, Home Textile & Lifestyle Product Sourcing</h1>
+              <p>
+                MASA Development International Limited supports international
+                customers with multi-category product development, compliant
+                supplier resources and responsive sourcing coordination.
+              </p>
+              <div className="button-row">
+                <Link className="button primary" href="/products">
+                  View Products
+                </Link>
+                <Link className="button secondary" href="/contact#message">
+                  Send Inquiry
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="slide-dots" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="content-width">
+            <div className="section-head">
+              <p className="eyebrow">Since 2008</p>
+              <h2>MASA Development International Limited</h2>
+              <p className="lead">
+                MASA was set up in the UK in 2008. Its Shanghai liaison office
+                was established in 2010 to support business development and
+                customer communication.
+              </p>
+            </div>
+            <div className="intro-copy">
+              <p>
+                Toy and home textile remain two main product categories, while
+                MASA also supports a variety of hardline items including home
+                items, stationery, sporting goods, pets, shopping bags, shoes
+                and seasonal lifestyle products.
+              </p>
+            </div>
+            <div className="stats">
+              <div className="stat">
+                <strong>2008</strong>
+                <span>Founded in the UK</span>
+              </div>
+              <div className="stat">
+                <strong>2010</strong>
+                <span>Shanghai liaison office established</span>
+              </div>
+              <div className="stat">
+                <strong>8+</strong>
+                <span>Main product categories supported</span>
+              </div>
+              <div className="stat">
+                <strong>Global</strong>
+                <span>Customer chain and supplier coordination</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section alt">
+          <div className="section-head center">
+            <p className="eyebrow">Product</p>
+            <h2>Multi-Category Product Support</h2>
+          </div>
+          <ProductGrid />
+        </section>
+
+        <section className="section">
+          <div className="section-head center">
+            <p className="eyebrow">Capability</p>
+            <h2>Built for Sourcing Teams</h2>
+          </div>
+          <div className="capability-grid content-width">
+            {capabilities.map((item) => (
+              <div className="capability" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
