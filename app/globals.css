@@ -243,13 +243,13 @@ select {
 .hero-side-left {
   left: 0;
   background-image: url('/assets/hero-left.jpg');
-  background-position: left 25%;
+  background-position: left 20%;
 }
 
 .hero-side-right {
   right: 0;
   background-image: url('/assets/hero-right.jpg');
-  background-position: right center;
+  background-position: right 20%;
 }
 
 .hero-content {
