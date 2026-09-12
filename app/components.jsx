@@ -7,12 +7,12 @@ import {
 } from "./site-data";
 
 export function Header({ active = "" }) {
-  const left = navItems.slice(0, 3);
-  const right = navItems.slice(3);
+  const left = navItems.slice(0, 2);
+  const right = navItems.slice(2);
 
   return (
-    <header className="nav-wrap">
-      <nav className="nav-side" aria-label="Primary navigation left">
+    <header className="site-header">
+      <nav className="nav-group" aria-label="Primary navigation left">
         {left.map((item) => (
           <Link
             className={`nav-link ${active === item.label ? "active" : ""}`}
@@ -23,12 +23,10 @@ export function Header({ active = "" }) {
           </Link>
         ))}
       </nav>
-      <Link className="brand-lockup" href="/" aria-label="MASA home">
-        <div className="brand-card">
-          <img src="/assets/masa-logo.svg" alt="MASA Development International" />
-        </div>
+      <Link className="brand-link" href="/" aria-label="MASA home">
+        <img src="/assets/masa-logo.svg" alt="MASA Development International" />
       </Link>
-      <nav className="nav-side" aria-label="Primary navigation right">
+      <nav className="nav-group" aria-label="Primary navigation right">
         {right.map((item) => (
           <Link
             className={`nav-link ${active === item.label ? "active" : ""}`}
@@ -60,8 +58,8 @@ export function Footer() {
           </small>
         </div>
         <div className="footer-contact">
-          <p>Phone: 13817878221</p>
-          <p>Email: services@masadvp.com</p>
+          <p>Email: <a href="mailto:services@masadvp.com">services@masadvp.com</a></p>
+          <p>We respond to B2B inquiries within 24 hours.</p>
         </div>
       </div>
     </footer>
@@ -96,24 +94,46 @@ export function PageHero({ title, breadcrumb, image = pageHeroImage }) {
 export function ProductGrid() {
   return (
     <div className="product-grid content-width">
-      {productCategories.map((category) => (
-        <Link
-          className="product-card"
-          href={`/products/${category.slug}`}
-          key={category.slug}
-        >
-          <div
-            className="product-card-image"
-            style={{ "--image": `url(${category.image})` }}
-            role="img"
-            aria-label={`${category.name} product category`}
-          />
-          <div className="product-card-body">
-            <h3>{category.name}</h3>
-            <p>{category.summary}</p>
-          </div>
-        </Link>
-      ))}
+      {productCategories.map((category) => {
+        const card = (
+          <>
+            <div
+              className="product-card-image"
+              style={{ "--image": `url(${category.image})` }}
+              role="img"
+              aria-label={`${category.name} product category`}
+            />
+            <div className="product-card-body">
+              <h3>{category.name}</h3>
+              <p>{category.summary}</p>
+            </div>
+          </>
+        );
+
+        if (category.externalUrl) {
+          return (
+            <a
+              className="product-card"
+              href={category.externalUrl}
+              key={category.slug}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {card}
+            </a>
+          );
+        }
+
+        return (
+          <Link
+            className="product-card"
+            href={`/products/${category.slug}`}
+            key={category.slug}
+          >
+            {card}
+          </Link>
+        );
+      })}
     </div>
   );
 }
@@ -121,11 +141,26 @@ export function ProductGrid() {
 export function CategoryNav() {
   return (
     <nav className="category-nav" aria-label="Product categories">
-      {productCategories.map((category) => (
-        <Link href={`/products/${category.slug}`} key={category.slug}>
-          {category.name}
-        </Link>
-      ))}
+      {productCategories.map((category) => {
+        if (category.externalUrl) {
+          return (
+            <a
+              href={category.externalUrl}
+              key={category.slug}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {category.name}
+            </a>
+          );
+        }
+
+        return (
+          <Link href={`/products/${category.slug}`} key={category.slug}>
+            {category.name}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

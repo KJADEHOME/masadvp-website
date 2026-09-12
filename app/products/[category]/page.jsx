@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { CategoryNav, Page, PageHero } from "../../components";
-import { pageHeroImage, productCategories, siteUrl } from "../../site-data";
+import { CategoryNav, Page } from "../../components";
+import { productCategories, siteUrl } from "../../site-data";
 
 export function generateStaticParams() {
   return productCategories.map((category) => ({ category: category.slug }));
@@ -35,53 +35,51 @@ export default async function CategoryPage({ params }) {
 
   return (
     <Page active="Product">
-      <main>
-        <PageHero
-          title="Product"
-          breadcrumb={`Home - Product - ${category.name}`}
-          image={pageHeroImage}
-        />
-        <section className="section">
+      <main className="category-page-layout">
+        <section className="category-page-top">
           <CategoryNav />
-          <div className="content-width contact-layout">
-            <aside className="contact-panel">
-              <h2>{category.name}</h2>
-              <div className="contact-list">
-                {category.subcategories.map((item) => (
-                  <Link href="/contact#message" key={item}>
-                    {item}
-                  </Link>
-                ))}
-              </div>
-            </aside>
-            <div>
-              <div className="section-head">
-                <p className="eyebrow">Product Category</p>
-                <h2>{category.name} Sourcing Support</h2>
-                <p className="lead">{category.summary}</p>
-              </div>
-              <div className="product-grid">
-                {category.products.map((item) => (
-                  <Link className="product-card" href="/contact#message" key={item}>
-                    <div
-                      className="product-card-image"
-                      style={{ "--image": `url(${category.image})` }}
-                      role="img"
-                      aria-label={`${item} example`}
-                    />
-                    <div className="product-card-body">
-                      <h3>{item}</h3>
-                      <p>
-                        Contact MASA to discuss development, samples, supplier
-                        resources and project requirements.
-                      </p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
         </section>
+
+        <section className="category-list-layout">
+          <aside className="category-feature-panel">
+            <div className="category-feature-card">
+              <div className="category-feature-title">{category.name}</div>
+              <div
+                className="category-feature-image"
+                style={{ "--image": `url(${category.image})` }}
+                role="img"
+                aria-label={`${category.name} feature image`}
+              />
+            </div>
+          </aside>
+
+          <section className="category-product-gallery">
+            {category.products.map((item) => (
+              <div className="category-product-tile" key={item.name}>
+                <div
+                  className="category-product-image"
+                  style={{ "--image": `url(${item.image})` }}
+                  role="img"
+                  aria-label={`${item.name} product sample`}
+                />
+                <div className="category-product-name">{item.name}</div>
+              </div>
+            ))}
+          </section>
+        </section>
+
+        {category.externalUrl ? (
+          <section className="category-external-row">
+            <a
+              className="button primary"
+              href={category.externalUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit KJADE Home
+            </a>
+          </section>
+        ) : null}
       </main>
     </Page>
   );

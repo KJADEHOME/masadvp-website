@@ -24,12 +24,17 @@ export default function ContactPage() {
               <h2>Contact</h2>
               <div className="contact-list">
                 <p>MASA Development International Limited</p>
-                <p>Email: services@masadvp.com</p>
-                <p>Phone: 13817878221</p>
                 <p>
-                  Send product details, target market, quantity range and any
-                  compliance requirements. The MASA team will follow up by
-                  email.
+                  Email: <a href="mailto:services@masadvp.com">services@masadvp.com</a>
+                </p>
+                <p>
+                  For B2B inquiries, please email your product requirements,
+                  target market and compliance details. We aim to respond within
+                  24 hours.
+                </p>
+                <p>
+                  You may also use the inquiry form for structured sourcing
+                  details and faster follow-up.
                 </p>
               </div>
             </aside>

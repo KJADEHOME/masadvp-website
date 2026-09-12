@@ -37,7 +37,6 @@ export async function POST(request) {
     <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
     <p><strong>Company:</strong> ${escapeHtml(data.company)}</p>
     <p><strong>Country / Region:</strong> ${escapeHtml(data.country)}</p>
-    <p><strong>Phone / WhatsApp:</strong> ${escapeHtml(data.phone)}</p>
     <p><strong>Product Interest:</strong> ${escapeHtml(data.interest)}</p>
     <p><strong>Message:</strong></p>
     <p>${escapeHtml(data.message).replaceAll("\n", "<br />")}</p>

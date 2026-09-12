@@ -2,23 +2,26 @@ import Link from "next/link";
 import { Header, Footer, ProductGrid } from "./components";
 import { capabilities, heroSlides } from "./site-data";
 
+export const metadata = {
+  title: "MASA Development International Limited",
+  description:
+    "Global sourcing for toys, home textile and lifestyle products with compliant supplier resources and responsive customer support.",
+  keywords: [
+    "toy sourcing",
+    "home textile sourcing",
+    "product sourcing",
+    "B2B sourcing",
+    "Shanghai sourcing"
+  ]
+};
+
 export default function HomePage() {
   return (
     <div className="site-shell">
       <Header active="Home" />
       <main>
         <section className="hero" aria-label="MASA Development International">
-          <div className="hero-grid">
-            {heroSlides.map((slide) => (
-              <div
-                className="hero-slide"
-                key={slide.image}
-                style={{ "--image": `url(${slide.image})` }}
-                role="img"
-                aria-label={slide.alt}
-              />
-            ))}
-          </div>
+          <div className="hero-side hero-side-left" aria-hidden="true" />
           <div className="hero-content">
             <div className="hero-copy">
               <h1>Toy, Home Textile & Lifestyle Product Sourcing</h1>
@@ -31,19 +34,13 @@ export default function HomePage() {
                 <Link className="button primary" href="/products">
                   View Products
                 </Link>
-                <Link className="button secondary" href="/contact#message">
-                  Send Inquiry
+                <Link className="button secondary" href="/contact">
+                  Contact Us
                 </Link>
               </div>
             </div>
           </div>
-          <div className="slide-dots" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
+          <div className="hero-side hero-side-right" aria-hidden="true" />
         </section>
 
         <section className="section">
@@ -64,6 +61,29 @@ export default function HomePage() {
                 items, stationery, sporting goods, pets, shopping bags, shoes
                 and seasonal lifestyle products.
               </p>
+            </div>
+            <div className="value-grid">
+              <div className="value-card">
+                <h3>Reliable Sourcing</h3>
+                <p>
+                  Vendor selection, supplier audits and compliance support for
+                  international retail and lifestyle brands.
+                </p>
+              </div>
+              <div className="value-card">
+                <h3>Flexible Product Support</h3>
+                <p>
+                  Development for toys, home textile, home decor, stationery,
+                  sports and seasonal lifestyle ranges.
+                </p>
+              </div>
+              <div className="value-card">
+                <h3>Responsive Communication</h3>
+                <p>
+                  Dedicated sourcing coordination with fast follow-up by email
+                  and project updates.
+                </p>
+              </div>
             </div>
             <div className="stats">
               <div className="stat">

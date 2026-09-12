@@ -30,6 +30,10 @@ export const metadata = {
     type: "website",
     locale: "en_US"
   },
+  robots: {
+    index: true,
+    follow: true
+  },
   other: [
     { name: "geo.region", content: "CN-31" },
     { name: "geo.placename", content: "Shanghai, China" },

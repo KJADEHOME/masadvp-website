@@ -17,8 +17,20 @@ export default function ProductsPage() {
           image={pageHeroImage}
         />
         <section className="section">
-          <CategoryNav />
-          <ProductGrid />
+          <div className="content-width">
+            <div className="section-head center">
+              <p className="eyebrow">Product Categories</p>
+              <h2>Comprehensive Sourcing Solutions</h2>
+              <p className="lead">
+                Explore MASA's sourcing categories for toys, home textile,
+                home decor, shoes, sporting goods, seasonal items and paper
+                products. Each category is supported by compliant suppliers and
+                responsive coordination.
+              </p>
+            </div>
+            <CategoryNav />
+            <ProductGrid />
+          </div>
         </section>
       </main>
     </Page>

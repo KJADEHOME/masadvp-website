@@ -7,7 +7,6 @@ const initialState = {
   email: "",
   company: "",
   country: "",
-  phone: "",
   interest: "",
   message: ""
 };
@@ -29,12 +28,21 @@ export default function ContactForm() {
     setStatus("sending");
     setNotice("");
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(form)
+const payload = {
+    name: form.name,
+    email: form.email,
+    company: form.company,
+    country: form.country,
+    interest: form.interest,
+    message: form.message
+  };
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
     });
 
     if (response.ok) {
@@ -56,6 +64,7 @@ export default function ContactForm() {
         <input
           id="name"
           name="name"
+          placeholder="Your full name"
           onChange={updateField}
           required
           value={form.name}
@@ -66,6 +75,7 @@ export default function ContactForm() {
         <input
           id="email"
           name="email"
+          placeholder="your@email.com"
           onChange={updateField}
           required
           type="email"
@@ -77,6 +87,7 @@ export default function ContactForm() {
         <input
           id="company"
           name="company"
+          placeholder="Company / Organization"
           onChange={updateField}
           value={form.company}
         />
@@ -86,17 +97,9 @@ export default function ContactForm() {
         <input
           id="country"
           name="country"
+          placeholder="Country or region"
           onChange={updateField}
           value={form.country}
-        />
-      </div>
-      <div className="field">
-        <label htmlFor="phone">Phone / WhatsApp</label>
-        <input
-          id="phone"
-          name="phone"
-          onChange={updateField}
-          value={form.phone}
         />
       </div>
       <div className="field">
@@ -123,6 +126,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
+          placeholder="Tell us your product needs, quantity and target market"
           onChange={updateField}
           required
           value={form.message}
@@ -130,7 +134,7 @@ export default function ContactForm() {
       </div>
       <div className="field full">
         <button className="button primary" disabled={status === "sending"} type="submit">
-          {status === "sending" ? "Sending..." : "Submit Inquiry"}
+          {status === "sending" ? "Sending..." : "Send Inquiry"}
         </button>
         {notice ? <p className="lead">{notice}</p> : null}
       </div>

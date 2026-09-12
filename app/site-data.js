@@ -5,7 +5,6 @@ export const navItems = [
   { label: "About Us", href: "/about" },
   { label: "Product", href: "/products" },
   { label: "News", href: "/news" },
-  { label: "Message", href: "/contact#message" },
   { label: "Contact Us", href: "/contact" }
 ];
 
@@ -17,114 +16,168 @@ export const footerItems = [
 export const heroSlides = [
   {
     image:
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=2200&q=82",
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1600&q=80",
     alt: "Children playing outdoors"
   },
   {
     image:
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=2200&q=82",
+      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1600&q=80",
     alt: "Colorful toy collection"
   },
   {
     image:
-      "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=2200&q=82",
+      "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1600&q=80",
     alt: "Children's toys and learning products"
   },
   {
     image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=2200&q=82",
+      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1600&q=80",
     alt: "Bright toy blocks"
   },
   {
     image:
-      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=2200&q=82",
+      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=1600&q=80",
     alt: "Home and family lifestyle products"
   }
 ];
 
 export const pageHeroImage =
-  "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=2200&q=82";
+  "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1600&q=80";
+
+const sunglassesImages = [
+  "sunglasses-01.jpg","sunglasses-02.jpg","sunglasses-03.jpg","sunglasses-04.jpg","sunglasses-05.jpg",
+  "sunglasses-06.jpg","sunglasses-07.jpg","sunglasses-08.jpg","sunglasses-09.jpg","sunglasses-10.jpg",
+  "sunglasses-11.jpg","sunglasses-12.jpg","sunglasses-13.jpg","sunglasses-14.jpg","sunglasses-15.jpg"
+];
+
+const toyImages = [
+  "toy-01.jpg","toy-02.jpg","toy-03.jpg","toy-04.jpg","toy-05.jpg","toy-06.png","toy-07.png",
+  "toy-08.jpg","toy-09.jpg","toy-10.jpg","toy-11.jpg","toy-12.jpg","toy-13.jpg","toy-14.jpg",
+  "toy-15.jpg","toy-16.jpg","toy-17.jpg","toy-20.jpg","toy-22.jpg","toy-23.jpg","toy-24.jpg",
+  "toy-26.jpg"
+];
+
+const homeTextileImages = [
+  "hometextile-01.jpg","hometextile-02.jpg","hometextile-03.jpg","hometextile-04.jpg","hometextile-05.jpg",
+  "hometextile-08.jpg","hometextile-09.jpg","hometextile-10.jpg","hometextile-11.jpg","hometextile-12.jpg",
+  "hometextile-13.png","hometextile-14.png","hometextile-15.png","hometextile-16.png","hometextile-17.png",
+  "hometextile-18.png","hometextile-19.png","hometextile-20.png","hometextile-21.png","hometextile-22.png",
+  "hometextile-23.jpg","hometextile-24.jpg","hometextile-25.jpg","hometextile-26.jpg","hometextile-27.jpg",
+  "hometextile-28.jpg","hometextile-29.jpg","hometextile-30.jpg","hometextile-31.jpg","hometextile-32.jpg",
+  "hometextile-33.jpg","hometextile-34.jpg","hometextile-35.jpg","hometextile-37.jpg","hometextile-38.jpg",
+  "hometextile-39.jpg","hometextile-41.jpg"
+];
+
+const sportingGoodsImages = [
+  "sporting-01.jpg","sporting-02.jpg","sporting-03.jpg","sporting-04.jpg","sporting-05.jpg",
+  "sporting-06.jpg","sporting-07.jpg"
+];
+
+const shoesImages = [
+  "shoes-01.png","shoes-02.jpg","shoes-03.jpg","shoes-04.jpg","shoes-05.jpg","shoes-06.jpg"
+];
+
+const paperImages = [
+  "paper-01.jpg","paper-02.jpg","paper-03.jpg","paper-04.jpg","paper-05.jpg","paper-06.jpg","paper-07.jpg"
+];
+
+const homeDecoImages = ["home-decor.jpg"];
+const umbrellaImages = [
+  "umbrella-01.jpg","umbrella-02.jpg","umbrella-03.jpg","umbrella-04.jpg","umbrella-05.jpg","umbrella-06.jpg"
+];
+
+const othersImages = ["shopping-bag.jpg"];
+
+function makeProducts(imageFiles, label) {
+  return imageFiles.map((file, index) => ({
+    name: `${label} ${index + 1}`,
+    image: `/assets/${file}`,
+    detail: `${label} product sample ${index + 1}.`
+  }));
+}
 
 export const productCategories = [
+  {
+    slug: "sunglasses",
+    name: "Sunglasses & Ski Goggles",
+    summary:
+      "Sunglasses and ski goggles sourcing for retail, sport and outdoor promotions.",
+    image: "/assets/sunglasses-cover.jpg",
+    subcategories: ["Fashion Sunglasses", "Sport Goggles", "Ski Goggles"],
+    products: makeProducts(sunglassesImages, "Sunglasses")
+  },
   {
     slug: "toy",
     name: "Toy",
     summary:
       "Plastic toys, plush toys, wooden toys, pet toys and remote control product sourcing support.",
-    image:
-      "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/toy-cover.jpg",
     subcategories: ["Plastic Toy", "Plush Toy", "Wooden Toy", "Pets Toy", "RC Toy"],
-    products: ["Soft Plush Range", "Learning Toy Set", "Character Play Item"]
+    products: makeProducts(toyImages, "Toy")
   },
   {
     slug: "hometextile",
     name: "Hometextile",
     summary:
       "Home textile development resources for everyday family, nursery and lifestyle ranges.",
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/hometextile.jpg",
     subcategories: ["Bedding", "Nursery Textile", "Cushion", "Blanket"],
-    products: ["Baby Textile Set", "Home Soft Goods", "Seasonal Textile Range"]
-  },
-  {
-    slug: "home-deco",
-    name: "Home Deco",
-    summary:
-      "Home decoration and lifestyle products for retail, promotional and private label programs.",
-    image:
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80",
-    subcategories: ["Room Decor", "Storage", "Lifestyle Gifts"],
-    products: ["Kids Room Decor", "Home Storage Item", "Decor Gift Range"]
-  },
-  {
-    slug: "shoes",
-    name: "Shoes",
-    summary:
-      "Seasonal, lifestyle and children-oriented footwear sourcing coordination.",
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80",
-    subcategories: ["Casual Shoes", "Children Shoes", "Seasonal Footwear"],
-    products: ["Kids Casual Shoes", "Indoor Slippers", "Lifestyle Footwear"]
+    products: makeProducts(homeTextileImages, "Home Textile")
   },
   {
     slug: "sporting-goods",
     name: "Sporting goods",
     summary:
       "Sporting, outdoor and activity items for family recreation and retail programs.",
-    image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/sporting-scene.jpg",
     subcategories: ["Outdoor Play", "Training Items", "Recreation"],
-    products: ["Outdoor Play Set", "Family Sport Item", "Activity Range"]
+    products: makeProducts(sportingGoodsImages, "Sporting Goods")
   },
   {
-    slug: "seasonal-item",
-    name: "Seasonal Item",
+    slug: "shoes",
+    name: "Shoes",
     summary:
-      "Flexible seasonal item development for holiday, retail and promotional campaigns.",
-    image:
-      "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1200&q=80",
-    subcategories: ["Holiday Item", "Gift", "Promotion"],
-    products: ["Holiday Gift Range", "Seasonal Decor", "Retail Promotion Item"]
+      "Seasonal, lifestyle and children-oriented footwear sourcing coordination.",
+    image: "/assets/shoes-cover.jpg",
+    subcategories: ["Casual Shoes", "Children Shoes", "Seasonal Footwear"],
+    products: makeProducts(shoesImages, "Shoes")
   },
   {
     slug: "paper-items",
     name: "Paper Items",
     summary:
       "Paper-based products, packaging and stationery support for lifestyle ranges.",
-    image:
-      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/paper-cover.jpg",
     subcategories: ["Stationery", "Packaging", "Paper Gifts"],
-    products: ["Stationery Set", "Gift Packaging", "Paper Craft Range"]
+    products: makeProducts(paperImages, "Paper Items")
+  },
+  {
+    slug: "home-deco",
+    name: "Home Deco",
+    summary:
+      "Home decoration and lifestyle products for retail, promotional and private label programs.",
+    image: "/assets/home-decor.jpg",
+    subcategories: ["Room Decor", "Storage", "Lifestyle Gifts"],
+    externalUrl: "https://www.kjadehome.com/",
+    products: makeProducts(homeDecoImages, "Home Deco")
+  },
+  {
+    slug: "umbrella",
+    name: "Umbrella",
+    summary:
+      "Umbrella and weather protection sourcing for retail, promotional and seasonal programs.",
+    image: "/assets/20140705051341K4BceK4Bce.jpg",
+    subcategories: ["Rain Umbrella", "Folding Umbrella", "Fashion Umbrella"],
+    products: makeProducts(umbrellaImages, "Umbrella")
   },
   {
     slug: "others",
     name: "Others",
     summary:
       "Additional hardline, home, pet, shopping bag and lifestyle item sourcing.",
-    image:
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/others-garden.jpg",
     subcategories: ["Home Items", "Pets", "Shopping Bag", "Lifestyle"],
-    products: ["Home Hardline Item", "Pet Product Range", "Shopping Bag Program"]
+    products: makeProducts(othersImages, "Other")
   }
 ];
 

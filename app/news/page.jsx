@@ -18,10 +18,10 @@ export default function NewsPage() {
               <p className="eyebrow">Updates</p>
               <h2>Company News & Product Notes</h2>
             </div>
-            <div className="product-grid">
+            <div className="news-grid">
               {newsItems.map((item) => (
-                <article className="product-card" key={item.title}>
-                  <div className="product-card-body">
+                <article className="news-card" key={item.title}>
+                  <div className="news-card-body">
                     <p className="eyebrow">{item.date}</p>
                     <h3>{item.title}</h3>
                     <p>{item.excerpt}</p>
