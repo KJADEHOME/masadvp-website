@@ -1,5 +1,5 @@
 import { Page, PageHero } from "../components";
-import { pageHeroImage } from "../site-data";
+import { pageHeroContactImage } from "../site-data";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function ContactPage() {
         <PageHero
           title="Contact Us"
           breadcrumb="Home - Contact Us"
-          image={pageHeroImage}
+          image={pageHeroContactImage}
         />
         <section className="section alt" id="message">
           <div className="content-width contact-layout">

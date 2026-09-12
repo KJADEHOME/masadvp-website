@@ -1,5 +1,5 @@
 import { CategoryNav, Page, PageHero, ProductGrid } from "../components";
-import { pageHeroImage } from "../site-data";
+import { pageHeroProductImage } from "../site-data";
 
 export const metadata = {
   title: "Products",
@@ -14,7 +14,7 @@ export default function ProductsPage() {
         <PageHero
           title="Product"
           breadcrumb="Home - Product"
-          image={pageHeroImage}
+          image={pageHeroProductImage}
         />
         <section className="section">
           <div className="content-width">

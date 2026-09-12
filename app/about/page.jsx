@@ -1,5 +1,5 @@
 import { Page, PageHero } from "../components";
-import { capabilities, pageHeroImage } from "../site-data";
+import { capabilities, pageHeroAboutImage } from "../site-data";
 
 export const metadata = {
   title: "About Us",
@@ -14,7 +14,7 @@ export default function AboutPage() {
         <PageHero
           title="About Us"
           breadcrumb="Home - About Us"
-          image={pageHeroImage}
+          image={pageHeroAboutImage}
         />
         <section className="section">
           <div className="content-width">

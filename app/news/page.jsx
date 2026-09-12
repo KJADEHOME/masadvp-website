@@ -1,5 +1,5 @@
 import { Page, PageHero } from "../components";
-import { newsItems, pageHeroImage } from "../site-data";
+import { newsItems, pageHeroNewsImage } from "../site-data";
 
 export const metadata = {
   title: "News",
@@ -11,7 +11,7 @@ export default function NewsPage() {
   return (
     <Page active="News">
       <main>
-        <PageHero title="News" breadcrumb="Home - News" image={pageHeroImage} />
+        <PageHero title="News" breadcrumb="Home - News" image={pageHeroNewsImage} />
         <section className="section">
           <div className="content-width">
             <div className="section-head">

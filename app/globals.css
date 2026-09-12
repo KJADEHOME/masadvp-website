@@ -93,9 +93,10 @@ select {
 
 .category-feature-image {
   min-height: 344px;
-  background: var(--image);
+  background: #f7f7f8 var(--image);
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .category-product-gallery {
@@ -116,9 +117,10 @@ select {
 
 .category-product-image {
   aspect-ratio: 4 / 3;
-  background: var(--image);
+  background: #f7f7f8 var(--image);
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   border-bottom: 1px solid #eef0f1;
 }
 

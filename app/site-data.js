@@ -220,3 +220,8 @@ export const newsItems = [
       "MASA is preparing a refreshed website with clearer product categories, inquiry forms and search-friendly structure."
   }
 ];
+
+export const pageHeroAboutImage = "/assets/hero-about.jpg";
+export const pageHeroProductImage = "/assets/hero-product.jpg";
+export const pageHeroNewsImage = "/assets/hero-news.jpg";
+export const pageHeroContactImage = "/assets/hero-contact.jpg";
