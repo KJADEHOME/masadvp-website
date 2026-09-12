@@ -814,6 +814,26 @@ h2 {
 }
 
 @media (max-width: 680px) {
+  .site-header {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 14px;
+    padding: 8px 12px;
+  }
+
+  .nav-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 12px;
+  }
+
+  .nav-link {
+    padding: 6px 4px;
+    font-size: 0.85rem;
+  }
+
   .nav-side {
     grid-template-columns: 1fr;
   }
@@ -836,6 +856,7 @@ h2 {
   }
 
   .user-grid,
+  .value-grid,
   .product-grid,
   .capability-grid,
   .stats,
