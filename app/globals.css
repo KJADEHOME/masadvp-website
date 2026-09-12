@@ -242,13 +242,13 @@ select {
 
 .hero-side-left {
   left: 0;
-  background-image: url('/assets/OIP.webp');
-  background-position: left center;
+  background-image: url('/assets/hero-left.jpg');
+  background-position: left 25%;
 }
 
 .hero-side-right {
   right: 0;
-  background-image: url('/assets/OpY1PZjpQn_small.jpg');
+  background-image: url('/assets/hero-right.jpg');
   background-position: right center;
 }
 
