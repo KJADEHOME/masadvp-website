@@ -58,14 +58,7 @@ const toyImages = [
 ];
 
 const homeTextileImages = [
-  "hometextile-01.jpg","hometextile-02.jpg","hometextile-03.jpg","hometextile-04.jpg","hometextile-05.jpg",
-  "hometextile-08.jpg","hometextile-09.jpg","hometextile-10.jpg","hometextile-11.jpg","hometextile-12.jpg",
-  "hometextile-13.png","hometextile-14.png","hometextile-15.png","hometextile-16.png","hometextile-17.png",
-  "hometextile-18.png","hometextile-19.png","hometextile-20.png","hometextile-21.png","hometextile-22.png",
-  "hometextile-23.jpg","hometextile-24.jpg","hometextile-25.jpg","hometextile-26.jpg","hometextile-27.jpg",
-  "hometextile-28.jpg","hometextile-29.jpg","hometextile-30.jpg","hometextile-31.jpg","hometextile-32.jpg",
-  "hometextile-33.jpg","hometextile-34.jpg","hometextile-35.jpg","hometextile-37.jpg","hometextile-38.jpg",
-  "hometextile-39.jpg","hometextile-41.jpg"
+  "hometextile-01.jpg","hometextile-02.jpg","hometextile-03.jpg","hometextile-04.jpg","hometextile-05.jpg","hometextile-06.jpg","hometextile-07.jpg","hometextile-08.jpg","hometextile-09.jpg","hometextile-10.jpg","hometextile-11.jpg","hometextile-12.jpg","hometextile-13.jpg","hometextile-14.jpg","hometextile-15.jpg","hometextile-16.jpg","hometextile-17.jpg","hometextile-18.jpg","hometextile-19.jpg"
 ];
 
 const sportingGoodsImages = [
