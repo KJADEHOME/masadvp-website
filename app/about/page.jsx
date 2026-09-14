@@ -21,22 +21,40 @@ export default function AboutPage() {
             <div className="section-head">
               <p className="eyebrow">MASA Development International Limited</p>
               <h2>Global product sourcing with responsive local support.</h2>
-              <p className="lead">
-                MASA was founded in the UK in 2008. Our Shanghai liaison office
-                began operations in 2010 to give international customers closer
-                sourcing coordination and compliance support.
-              </p>
             </div>
             <div className="intro-copy">
               <p>
-                We focus on toy and home textile sourcing, while also supporting
-                hardline categories like home decor, stationery, sports, pets,
-                seasonal lifestyle and paper-based products.
+                MASA was set up in UK since 2008, our Liaison Shanghai office
+                was established in 2010 upon business development request.
               </p>
               <p>
-                MASA maintains a compliant supplier network capable of handling
-                ICTI, GSV, BSCI and COC requirements, with a client-first
-                process for international retail and private-label programs.
+                After Covid-19 suffering period, our company not only survived
+                during such a difficult environment but also expanded our
+                business range far beyond expectation.
+              </p>
+              <p>
+                Since 2022, we set up our branch office in Yiwu China area in
+                order to support overseas online/offline ODM customers. Up till
+                now, we already developed quite a few large-scale COC factories
+                to this business.
+              </p>
+              <p>
+                Accessory category has been now one of our leading product
+                development ranges after so many years business engagement.
+                Sunglasses, Umbrellas, foot-wears, bags are our top 4 lines in
+                general, while we also provide variety of textile items
+                including hats/gloves, stationery, sporting goods, plush toys,
+                hair accessory, blankets, etc.
+              </p>
+              <p>
+                We are keen in licensed items and have strong compliant factory
+                database with all kinds of certificate including ICTI, GSV,
+                BSCI, COC, Sedex, etc.
+              </p>
+              <p>
+                With the fast expansion of business, we developed a
+                multi-national customers chain around the world especially for
+                big-scale retailers and supermarkets.
               </p>
             </div>
           </div>
