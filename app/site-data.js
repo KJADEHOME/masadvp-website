@@ -60,7 +60,8 @@ const homeTextileImages = [
 
 const sportingGoodsImages = [
   "sporting-01.jpg","sporting-02.jpg","sporting-03.jpg","sporting-04.jpg","sporting-05.jpg",
-  "sporting-06.jpg","sporting-07.jpg"
+  "sporting-06.jpg","sporting-07.jpg","sporting-08.jpg","sporting-09.jpg","sporting-10.jpg",
+  "sporting-11.jpg","sporting-12.jpg"
 ];
 
 const shoesImages = [
