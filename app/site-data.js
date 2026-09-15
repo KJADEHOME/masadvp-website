@@ -65,7 +65,10 @@ const sportingGoodsImages = [
 ];
 
 const shoesImages = [
-  "shoes-01.png","shoes-02.jpg","shoes-03.jpg","shoes-04.jpg","shoes-05.jpg","shoes-06.jpg"
+  "shoes-01.jpg","shoes-02.jpg","shoes-03.jpg","shoes-04.jpg","shoes-05.jpg","shoes-06.jpg",
+  "shoes-07.jpg","shoes-08.jpg","shoes-09.jpg","shoes-10.jpg","shoes-11.jpg","shoes-12.jpg",
+  "shoes-13.jpg","shoes-14.jpg","shoes-15.jpg","shoes-16.jpg","shoes-17.jpg","shoes-18.jpg",
+  "shoes-19.jpg","shoes-20.jpg","shoes-21.jpg","shoes-22.jpg"
 ];
 
 const paperImages = [
