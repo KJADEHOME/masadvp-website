@@ -51,7 +51,7 @@ const sunglassesImages = [
 ];
 
 const toyImages = [
-  "toy-01.jpg","toy-02.jpg","toy-03.jpg","toy-04.jpg","toy-05.jpg","toy-06.jpg","toy-07.jpg","toy-08.jpg","toy-09.jpg","toy-10.jpg","toy-11.jpg","toy-12.jpg","toy-13.jpg","toy-14.jpg","toy-15.jpg"
+  "toy-10.jpg","toy-01.jpg","toy-02.jpg","toy-03.jpg","toy-04.jpg","toy-05.jpg","toy-06.jpg","toy-07.jpg","toy-08.jpg","toy-09.jpg","toy-11.jpg","toy-12.jpg","toy-13.jpg","toy-14.jpg","toy-15.jpg"
 ];
 
 const homeTextileImages = [
