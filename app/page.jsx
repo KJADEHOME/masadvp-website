@@ -49,17 +49,30 @@ export default function HomePage() {
               <p className="eyebrow">Since 2008</p>
               <h2>MASA Development International Limited</h2>
               <p className="lead">
-                MASA was set up in the UK in 2008. Its Shanghai liaison office
-                was established in 2010 to support business development and
-                customer communication.
+                MASA was set up in UK since 2008, our Liaison Shanghai office
+                was established in 2010 upon business development request.
               </p>
             </div>
             <div className="intro-copy">
               <p>
-                Toy and home textile remain two main product categories, while
-                MASA also supports a variety of hardline items including home
-                items, stationery, sporting goods, pets, shopping bags, shoes
-                and seasonal lifestyle products.
+                After Covid-19 suffering period, our company not only survived
+                during such a difficult environment but also expanded our
+                business range far beyond expectation. Since 2022, we set up
+                our branch office in Yiwu China area in order to support
+                overseas online/offline ODM customers.
+              </p>
+              <p>
+                Sunglasses, Umbrellas, foot-wears, bags are our top 4 lines in
+                general, while we also provide variety of textile items
+                including hats/gloves, stationery, sporting goods, plush toys,
+                hair accessory, blankets, etc.
+              </p>
+              <p>
+                We are keen in licensed items and have strong compliant factory
+                database with all kinds of certificate including ICTI, GSV,
+                BSCI, COC, Sedex, etc. With the fast expansion of business, we
+                developed a multi-national customers chain around the world
+                especially for big-scale retailers and supermarkets.
               </p>
             </div>
             <div className="value-grid">
@@ -95,8 +108,8 @@ export default function HomePage() {
                 <span>Shanghai liaison office established</span>
               </div>
               <div className="stat">
-                <strong>8+</strong>
-                <span>Main product categories supported</span>
+                <strong>2022</strong>
+                <span>Yiwu branch office established</span>
               </div>
               <div className="stat">
                 <strong>Global</strong>
