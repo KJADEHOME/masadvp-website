@@ -77,7 +77,9 @@ const paperImages = [
 
 const homeDecoImages = ["home-decor.jpg"];
 const umbrellaImages = [
-  "umbrella-01.jpg","umbrella-02.jpg","umbrella-03.jpg","umbrella-04.jpg","umbrella-05.jpg","umbrella-06.jpg"
+  "umbrella-01.jpg","umbrella-02.jpg","umbrella-03.jpg","umbrella-04.jpg","umbrella-05.jpg","umbrella-06.jpg",
+  "umbrella-07.jpg","umbrella-08.jpg","umbrella-09.jpg","umbrella-10.jpg","umbrella-11.jpg","umbrella-12.jpg",
+  "umbrella-13.jpg","umbrella-14.jpg","umbrella-15.jpg"
 ];
 
 const othersImages = ["shopping-bag.jpg"];
