@@ -177,7 +177,7 @@ export const productCategories = [
     name: "Pet",
     summary:
       "Pet furniture, beds, apparel, bags, accessories and toy sourcing for pet brands and retail programs.",
-    image: "/assets/pet-01.jpg",
+    image: "/assets/pet-cover.jpg",
     subcategories: ["Cat Tree", "Pet Bed", "Pet Apparel", "Pet Accessories", "Pet Bag", "Pet Toy"],
     products: makeProducts(petImages, "Pet")
   }
