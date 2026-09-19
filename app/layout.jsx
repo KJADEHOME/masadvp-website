@@ -42,10 +42,34 @@ export const metadata = {
   ]
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MASA Development International Limited",
+  url: siteUrl,
+  logo: `${siteUrl}/assets/masa-logo.svg`,
+  email: "services@masadvp.com",
+  foundingDate: "2008",
+  description:
+    "Global sourcing for toys, home textile, pet products and lifestyle items with compliant supplier resources.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Shanghai",
+    addressCountry: "CN"
+  },
+  sameAs: []
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
