@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Header, Footer, ProductGrid } from "./components";
-import { capabilities, heroSlides } from "./site-data";
+import { capabilities } from "./site-data";
 
 export const metadata = {
   title: "MASA Development International Limited",
@@ -18,6 +18,8 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className="site-shell">
+      <link rel="preload" as="image" href="/assets/hero-left.jpg" fetchPriority="high" />
+      <link rel="preload" as="image" href="/assets/hero-right.jpg" fetchPriority="high" />
       <Header active="Home" />
       <main>
         <section className="hero" aria-label="MASA Development International">

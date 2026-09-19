@@ -41,8 +41,7 @@ export const heroSlides = [
   }
 ];
 
-export const pageHeroImage =
-  "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1600&q=80";
+export const pageHeroImage = "/assets/pagehero.jpg";
 
 const sunglassesImages = [
   "sunglasses-01.jpg","sunglasses-02.jpg","sunglasses-03.jpg","sunglasses-04.jpg","sunglasses-05.jpg",
