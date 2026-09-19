@@ -56,11 +56,12 @@ export default async function CategoryPage({ params }) {
           <section className="category-product-gallery">
             {category.products.map((item) => (
               <div className="category-product-tile" key={item.name}>
-                <div
+                <img
                   className="category-product-image"
-                  style={{ "--image": `url(${item.image})` }}
-                  role="img"
-                  aria-label={`${item.name} product sample`}
+                  src={item.image}
+                  alt={`${item.name} - ${category.name} product sample`}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="category-product-name">{item.name}</div>
               </div>

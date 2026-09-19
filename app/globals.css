@@ -116,11 +116,11 @@ select {
 }
 
 .category-product-image {
+  display: block;
+  width: 100%;
   aspect-ratio: 4 / 3;
-  background: #f7f7f8 var(--image);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  object-fit: contain;
+  background: #f7f7f8;
   border-bottom: 1px solid #eef0f1;
 }
 
