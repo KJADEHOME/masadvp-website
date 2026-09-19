@@ -102,8 +102,13 @@ export const productCategories = [
   {
     slug: "sunglasses",
     name: "Sunglasses & Ski Goggles",
+    metaTitle: "Sunglasses & Ski Goggles Sourcing from China | MASA",
     summary:
       "Sunglasses and ski goggles sourcing for retail, sport and outdoor promotions.",
+    intro: [
+      "MASA Development International helps retailers, importers and promotional buyers source sunglasses and ski goggles directly from certified factories in China. Our range covers fashion sunglasses, sport sunglasses, polarized lenses, kids sunglasses, ski goggles and snowboard goggles, with full support for OEM designs, custom logos, lens coatings and retail-ready packaging.",
+      "With sourcing offices in Shanghai and Yiwu, we audit every factory for quality systems and compliance before production, and coordinate samples, inspection and shipment so your eyewear program arrives on schedule. Whether you need seasonal promotion volumes or a private label eyewear collection, our team provides responsive quotations and factory-matched solutions."
+    ],
     image: "/assets/sunglasses-cover.jpg",
     subcategories: ["Fashion Sunglasses", "Sport Goggles", "Ski Goggles"],
     products: makeProducts(sunglassesImages, "Sunglasses")
@@ -111,8 +116,13 @@ export const productCategories = [
   {
     slug: "toy",
     name: "Toy",
+    metaTitle: "Toy Sourcing & Manufacturing in China | MASA",
     summary:
       "Plastic toys, plush toys, wooden toys, pet toys and remote control product sourcing support.",
+    intro: [
+      "Toys are our founding category. Since 2008 MASA has supported international retailers, toy brands and supermarkets with toy sourcing and manufacturing across China, covering plastic toys, plush and stuffed toys, wooden toys, educational toys, remote control toys, die-cast vehicles and dolls.",
+      "Every toy factory in our supplier network is audited for ICTI, GSV, BSCI and COC compliance, and we coordinate EN71 and ASTM testing, sample development, golden samples and pre-shipment inspection. From licensed character programs to promotional toy ranges, our Shanghai and Yiwu teams manage development and production follow-up so your toy lines land safely and on time."
+    ],
     image: "/assets/toy-cover.jpg",
     subcategories: ["Plastic Toy", "Plush Toy", "Wooden Toy", "Pets Toy", "RC Toy"],
     products: makeProducts(toyImages, "Toy")
@@ -120,8 +130,13 @@ export const productCategories = [
   {
     slug: "hometextile",
     name: "Hometextile",
+    metaTitle: "Home Textile Sourcing from China | MASA",
     summary:
       "Home textile development resources for everyday family, nursery and lifestyle ranges.",
+    intro: [
+      "MASA coordinates home textile sourcing from China for bedding, blankets, cushions, nursery textiles, kitchen textiles and seasonal decorative fabrics. We work with mills and sewing facilities in Zhejiang, Jiangsu and Shandong that serve European and American retail programs every day.",
+      "Our team supports fabric selection, color matching, sample development, OEKO-TEX and REACH compliance, packaging design and consolidated shipping. Whether you are building an own-label bedding range or need promotional blanket programs for seasonal campaigns, we match your quality level and target price with the right factory."
+    ],
     image: "/assets/hometextile.jpg",
     subcategories: ["Bedding", "Nursery Textile", "Cushion", "Blanket"],
     products: makeProducts(homeTextileImages, "Home Textile")
@@ -129,8 +144,13 @@ export const productCategories = [
   {
     slug: "sporting-goods",
     name: "Sporting goods",
+    metaTitle: "Sporting Goods Sourcing from China | MASA",
     summary:
       "Sporting, outdoor and activity items for family recreation and retail programs.",
+    intro: [
+      "We source sporting goods and outdoor activity products for family recreation, sports retail and promotional programs, including fitness accessories, camping and beach items, water sports products, yard games and seasonal sporting sets.",
+      "MASA's supplier network covers specialized sporting goods clusters in Zhejiang and Guangdong, with factory audits, product testing coordination and full development follow-up. From single promotional giveaways to complete own-brand sporting ranges, we handle sampling, pricing, production tracking and quality inspection end to end."
+    ],
     image: "/assets/sporting-scene.jpg",
     subcategories: ["Outdoor Play", "Training Items", "Recreation"],
     products: makeProducts(sportingGoodsImages, "Sporting Goods")
@@ -138,8 +158,13 @@ export const productCategories = [
   {
     slug: "shoes",
     name: "Shoes",
+    metaTitle: "Shoes & Footwear Sourcing from China | MASA",
     summary:
       "Seasonal, lifestyle and children-oriented footwear sourcing coordination.",
+    intro: [
+      "MASA provides shoes and footwear sourcing from China for seasonal collections, lifestyle brands and children-oriented retail programs. Our range includes slippers, sandals, canvas shoes, sport shoes, rain boots and winter boots, developed with factories in Fujian, Zhejiang and Guangdong footwear clusters.",
+      "We support last and sole development, material sourcing, size grading, sample confirmation and social compliance audits, coordinating every step from design brief to container loading. Whether you need a promotional slipper program or a full private label footwear line, our team keeps quality, cost and delivery under control."
+    ],
     image: "/assets/shoes-cover.jpg",
     subcategories: ["Casual Shoes", "Children Shoes", "Seasonal Footwear"],
     products: makeProducts(shoesImages, "Shoes")
@@ -147,8 +172,13 @@ export const productCategories = [
   {
     slug: "paper-items",
     name: "Paper Items",
+    metaTitle: "Paper Items & Stationery Sourcing | MASA",
     summary:
       "Paper-based products, packaging and stationery support for lifestyle ranges.",
+    intro: [
+      "From stationery and greeting cards to paper gift bags and custom packaging, MASA sources paper-based products for retailers, book chains and lifestyle brands. Our suppliers specialize in notebooks, sticky notes, paper crafts, party paper goods and FSC-certified packaging solutions.",
+      "We manage artwork, printing proofing, material options and certification such as FSC, and consolidate paper items with your other sourced products to reduce shipping cost. This makes us a practical single-point partner for complete retail and promotional programs that mix hardlines with paper goods."
+    ],
     image: "/assets/paper-cover.jpg",
     subcategories: ["Stationery", "Packaging", "Paper Gifts"],
     products: makeProducts(paperImages, "Paper Items")
@@ -156,8 +186,13 @@ export const productCategories = [
   {
     slug: "home-deco",
     name: "Home Deco",
+    metaTitle: "Home Decoration Products Sourcing | MASA",
     summary:
       "Home decoration and lifestyle products for retail, promotional and private label programs.",
+    intro: [
+      "Our home decoration sourcing covers seasonal decor, storage and organization, artificial plants, photo frames, candles and lifestyle gift items for retail chains, promotional distributors and private label brands.",
+      "Working together with our KJADE Home product team, we develop decoration programs that match European and American seasonal trends, coordinate material development and samples, and follow production through to inspection and shipment. Visit KJADE Home to explore our ready-to-order home decoration collections."
+    ],
     image: "/assets/home-decor.jpg",
     subcategories: ["Room Decor", "Storage", "Lifestyle Gifts"],
     externalUrl: "https://www.kjadehome.com/",
@@ -166,8 +201,13 @@ export const productCategories = [
   {
     slug: "umbrella",
     name: "Umbrella",
+    metaTitle: "Umbrella Sourcing & Manufacturing in China | MASA",
     summary:
       "Umbrella and weather protection sourcing for retail, promotional and seasonal programs.",
+    intro: [
+      "Umbrellas are one of our top four product lines. MASA sources rain umbrellas, folding umbrellas, golf umbrellas, kids umbrellas and fashion umbrellas from the umbrella manufacturing hub of Shangyu and Xiamen, serving promotional distributors and retail programs across Europe and the United States.",
+      "We support custom printing, fabric and frame selection, wind-resistance testing and full container or consolidated shipments. From 10,000-piece promotional giveaways to structured retail umbrella ranges with private label branding, our team coordinates development, samples and inspection so every shipment opens smoothly."
+    ],
     image: "/assets/20140705051341K4BceK4Bce.jpg",
     subcategories: ["Rain Umbrella", "Folding Umbrella", "Fashion Umbrella"],
     products: makeProducts(umbrellaImages, "Umbrella")
@@ -175,8 +215,13 @@ export const productCategories = [
   {
     slug: "pet",
     name: "Pet",
+    metaTitle: "Pet Products Sourcing from China | MASA",
     summary:
       "Pet furniture, beds, apparel, bags, accessories and toy sourcing for pet brands and retail programs.",
+    intro: [
+      "Pet products are one of our fastest-growing sourcing categories. MASA helps pet brands, pet shops and retail chains source cat trees and cat furniture, pet beds, pet apparel, pet carrier bags, collars and harnesses, feeding accessories and pet toys from vetted factories in Zhejiang and Shandong.",
+      "We coordinate plush and wooden cat tree development, fabric and filling selection, strength and safety testing, private label branding and retail-ready packaging. Whether you are launching an own-brand pet collection or expanding a seasonal pet toy range, our Shanghai and Yiwu teams manage sampling, pricing, compliance and production follow-up from brief to shipment."
+    ],
     image: "/assets/pet-cover.jpg",
     subcategories: ["Cat Tree", "Pet Bed", "Pet Apparel", "Pet Accessories", "Pet Bag", "Pet Toy"],
     products: makeProducts(petImages, "Pet")

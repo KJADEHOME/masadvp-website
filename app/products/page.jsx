@@ -2,9 +2,9 @@ import { CategoryNav, Page, PageHero, ProductGrid } from "../components";
 import { pageHeroProductImage } from "../site-data";
 
 export const metadata = {
-  title: "Products",
+  title: "Product Sourcing Categories from China | MASA",
   description:
-    "Explore MASA product sourcing categories including toys, home textile, home decor, shoes, sporting goods, seasonal items and paper items."
+    "Explore MASA sourcing categories: toys, pet products, sunglasses, umbrellas, shoes, home textile, sporting goods, paper items and home decor, all from audited Chinese factories."
 };
 
 export default function ProductsPage() {

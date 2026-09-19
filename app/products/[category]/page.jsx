@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${category.name} Products`,
+    title: category.metaTitle || `${category.name} Sourcing from China | MASA`,
     description: category.summary,
     alternates: {
       canonical: `${siteUrl}/products/${category.slug}`
@@ -67,6 +67,17 @@ export default async function CategoryPage({ params }) {
             ))}
           </section>
         </section>
+
+        {category.intro && category.intro.length > 0 ? (
+          <section className="section">
+            <div className="content-width category-intro">
+              <h2>{category.name} Sourcing Service</h2>
+              {category.intro.map((paragraph) => (
+                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {category.externalUrl ? (
           <section className="category-external-row">

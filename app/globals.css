@@ -882,3 +882,41 @@ h2 {
     justify-content: start;
   }
 }
+
+.category-intro {
+  max-width: 860px;
+}
+
+.category-intro h2 {
+  margin-bottom: 18px;
+}
+
+.category-intro p {
+  margin-bottom: 14px;
+  line-height: 1.75;
+  color: #4b4f5a;
+}
+
+.faq-list {
+  display: grid;
+  gap: 18px;
+  max-width: 900px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #ececf1;
+  border-radius: 12px;
+  padding: 22px 26px;
+}
+
+.faq-item h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #1c1e26;
+}
+
+.faq-item p {
+  line-height: 1.7;
+  color: #4b4f5a;
+}

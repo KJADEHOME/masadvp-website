@@ -2,9 +2,9 @@ import { Page, PageHero } from "../components";
 import { newsItems, pageHeroNewsImage } from "../site-data";
 
 export const metadata = {
-  title: "News",
+  title: "Sourcing News & Insights | MASA",
   description:
-    "Company updates from MASA Development International Limited."
+    "Updates and insights from MASA Development International on toy, pet products, home textile and lifestyle goods sourcing from China."
 };
 
 export default function NewsPage() {

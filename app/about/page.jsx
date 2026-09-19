@@ -2,9 +2,9 @@ import { Page, PageHero } from "../components";
 import { capabilities, pageHeroAboutImage } from "../site-data";
 
 export const metadata = {
-  title: "About Us",
+  title: "About Our Sourcing Company | MASA Since 2008",
   description:
-    "Learn about MASA Development International Limited, its UK foundation, Shanghai liaison office and compliant supplier resources."
+    "MASA Development International: UK-founded sourcing company since 2008 with Shanghai and Yiwu offices, audited toy, pet and lifestyle product factories across China."
 };
 
 export default function AboutPage() {
