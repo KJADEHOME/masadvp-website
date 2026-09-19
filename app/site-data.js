@@ -82,7 +82,14 @@ const umbrellaImages = [
   "umbrella-13.jpg","umbrella-14.jpg","umbrella-15.jpg"
 ];
 
-const othersImages = ["shopping-bag.jpg"];
+const petImages = [
+  "pet-01.jpg","pet-02.jpg","pet-03.jpg","pet-04.jpg","pet-05.jpg","pet-06.jpg",
+  "pet-07.jpg","pet-08.jpg","pet-09.jpg","pet-10.jpg","pet-11.jpg","pet-12.jpg",
+  "pet-13.jpg","pet-14.jpg","pet-15.jpg","pet-16.jpg","pet-17.jpg","pet-18.jpg",
+  "pet-19.jpg","pet-20.jpg","pet-21.jpg","pet-22.jpg","pet-23.jpg","pet-24.jpg",
+  "pet-25.jpg","pet-26.jpg","pet-27.jpg","pet-28.jpg","pet-29.jpg","pet-30.jpg",
+  "pet-31.jpg","pet-32.jpg","pet-33.jpg","pet-34.jpg"
+];
 
 function makeProducts(imageFiles, label) {
   return imageFiles.map((file, index) => ({
@@ -167,13 +174,13 @@ export const productCategories = [
     products: makeProducts(umbrellaImages, "Umbrella")
   },
   {
-    slug: "others",
-    name: "Others",
+    slug: "pet",
+    name: "Pet",
     summary:
-      "Additional hardline, home, pet, shopping bag and lifestyle item sourcing.",
-    image: "/assets/others-garden.jpg",
-    subcategories: ["Home Items", "Pets", "Shopping Bag", "Lifestyle"],
-    products: makeProducts(othersImages, "Other")
+      "Pet furniture, beds, apparel, bags, accessories and toy sourcing for pet brands and retail programs.",
+    image: "/assets/pet-01.jpg",
+    subcategories: ["Cat Tree", "Pet Bed", "Pet Apparel", "Pet Accessories", "Pet Bag", "Pet Toy"],
+    products: makeProducts(petImages, "Pet")
   }
 ];
 
