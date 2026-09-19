@@ -249,6 +249,15 @@ export const capabilities = [
 
 export const newsItems = [
   {
+    title: "Pet Demand Is Now Subscription Infrastructure",
+    date: "2026-09-09",
+    excerpt:
+      "Chewy's 84.6% Autoship share and Golden Pet Brands' $1B+ IPO plan point to the same shift: the next generation of pet brands buys differently. What it means for suppliers.",
+    featured: true,
+    image: "/assets/news-pet-subscription.jpg",
+    href: "/news/pet-subscription-economy"
+  },
+  {
     title: "Product Sourcing Support for Global Lifestyle Programs",
     date: "2026-08-03",
     excerpt:

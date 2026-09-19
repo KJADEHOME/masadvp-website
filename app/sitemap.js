@@ -7,6 +7,7 @@ export default function sitemap() {
     "/about",
     "/products",
     "/news",
+    "/news/pet-subscription-economy",
     "/contact",
     "/privacy-policy"
   ];

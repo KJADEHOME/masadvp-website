@@ -19,15 +19,34 @@ export default function NewsPage() {
               <h2>Company News & Product Notes</h2>
             </div>
             <div className="news-grid">
-              {newsItems.map((item) => (
-                <article className="news-card" key={item.title}>
-                  <div className="news-card-body">
-                    <p className="eyebrow">{item.date}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.excerpt}</p>
-                  </div>
-                </article>
-              ))}
+              {newsItems.map((item) =>
+                item.featured ? (
+                  <article className="news-card news-card-featured" key={item.title}>
+                    <a className="news-card-link" href={item.href}>
+                      <div
+                        className="news-card-image"
+                        style={{ "--image": `url(${item.image})` }}
+                        role="img"
+                        aria-label={item.title}
+                      />
+                      <div className="news-card-body">
+                        <p className="eyebrow">{item.date} - Featured Insight</p>
+                        <h3>{item.title}</h3>
+                        <p>{item.excerpt}</p>
+                        <span className="news-card-more">Read the full article &rarr;</span>
+                      </div>
+                    </a>
+                  </article>
+                ) : (
+                  <article className="news-card" key={item.title}>
+                    <div className="news-card-body">
+                      <p className="eyebrow">{item.date}</p>
+                      <h3>{item.title}</h3>
+                      <p>{item.excerpt}</p>
+                    </div>
+                  </article>
+                )
+              )}
             </div>
           </div>
         </section>

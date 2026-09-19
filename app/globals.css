@@ -517,6 +517,67 @@ h2 {
   padding: 24px;
 }
 
+.news-card-featured {
+  grid-column: 1 / -1;
+}
+
+.news-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-card-image {
+  aspect-ratio: 21 / 8;
+  background: #f7f7f8 var(--image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news-card-more {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 600;
+  color: #0f4c81;
+}
+
+.article-layout {
+  max-width: 760px;
+}
+
+.article-body h1 {
+  font-size: 2rem;
+  margin: 10px 0 24px;
+  color: #242424;
+}
+
+.article-body h2 {
+  font-size: 1.3rem;
+  margin: 32px 0 12px;
+  color: #242424;
+}
+
+.article-body p {
+  line-height: 1.8;
+  color: #3a3a3a;
+}
+
+.article-body a {
+  color: #0f4c81;
+  font-weight: 600;
+}
+
+.article-image {
+  aspect-ratio: 3 / 2;
+  margin: 8px 0 28px;
+  border-radius: 12px;
+  background: #f7f7f8 url("/assets/news-pet-subscription.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .news-card h3 {
   margin: 0 0 14px;
   font-size: 1.2rem;
