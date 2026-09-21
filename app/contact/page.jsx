@@ -3,9 +3,12 @@ import { pageHeroContactImage } from "../site-data";
 import ContactForm from "./ContactForm";
 
 export const metadata = {
-  title: "Contact Our Sourcing Team in China | MASA",
+  title: "Contact Our Sourcing Team in China",
   description:
-    "Contact MASA Development International for toy, pet products, home textile and lifestyle sourcing. B2B inquiries answered within 24 hours by our Shanghai team."
+    "Contact MASA Development International for toy, pet products, home textile and lifestyle sourcing. B2B inquiries answered within 24 hours by our Shanghai team.",
+  alternates: {
+    canonical: "https://www.masadvp.com/contact"
+  }
 };
 
 const faqs = [

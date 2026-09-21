@@ -4,7 +4,10 @@ import { pageHeroImage } from "../site-data";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for MASA Development International Limited website inquiries."
+    "Privacy policy for MASA Development International Limited website inquiries.",
+  alternates: {
+    canonical: "https://www.masadvp.com/privacy-policy"
+  }
 };
 
 export default function PrivacyPolicyPage() {

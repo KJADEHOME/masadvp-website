@@ -43,7 +43,7 @@ export default async function CategoryPage({ params }) {
         <section className="category-list-layout">
           <aside className="category-feature-panel">
             <div className="category-feature-card">
-              <div className="category-feature-title">{category.name}</div>
+              <h1 className="category-feature-title">{category.name}</h1>
               <div
                 className="category-feature-image"
                 style={{ "--image": `url(${category.image})` }}

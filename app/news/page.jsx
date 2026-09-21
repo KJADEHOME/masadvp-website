@@ -2,9 +2,12 @@ import { Page, PageHero } from "../components";
 import { newsItems, pageHeroNewsImage } from "../site-data";
 
 export const metadata = {
-  title: "Sourcing News & Insights | MASA",
+  title: "Sourcing News & Insights",
   description:
-    "Updates and insights from MASA Development International on toy, pet products, home textile and lifestyle goods sourcing from China."
+    "Updates and insights from MASA Development International on toy, pet products, home textile and lifestyle goods sourcing from China.",
+  alternates: {
+    canonical: "https://www.masadvp.com/news"
+  }
 };
 
 export default function NewsPage() {

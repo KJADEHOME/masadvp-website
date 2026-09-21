@@ -102,7 +102,7 @@ export const productCategories = [
   {
     slug: "sunglasses",
     name: "Sunglasses & Ski Goggles",
-    metaTitle: "Sunglasses & Ski Goggles Sourcing from China | MASA",
+    metaTitle: "Sunglasses & Ski Goggles Sourcing from China",
     summary:
       "Sunglasses and ski goggles sourcing for retail, sport and outdoor promotions.",
     intro: [
@@ -116,7 +116,7 @@ export const productCategories = [
   {
     slug: "toy",
     name: "Toy",
-    metaTitle: "Toy Sourcing & Manufacturing in China | MASA",
+    metaTitle: "Toy Sourcing & Manufacturing in China",
     summary:
       "Plastic toys, plush toys, wooden toys, pet toys and remote control product sourcing support.",
     intro: [
@@ -130,7 +130,7 @@ export const productCategories = [
   {
     slug: "hometextile",
     name: "Hometextile",
-    metaTitle: "Home Textile Sourcing from China | MASA",
+    metaTitle: "Home Textile Sourcing from China",
     summary:
       "Home textile development resources for everyday family, nursery and lifestyle ranges.",
     intro: [
@@ -144,7 +144,7 @@ export const productCategories = [
   {
     slug: "sporting-goods",
     name: "Sporting goods",
-    metaTitle: "Sporting Goods Sourcing from China | MASA",
+    metaTitle: "Sporting Goods Sourcing from China",
     summary:
       "Sporting, outdoor and activity items for family recreation and retail programs.",
     intro: [
@@ -158,7 +158,7 @@ export const productCategories = [
   {
     slug: "shoes",
     name: "Shoes",
-    metaTitle: "Shoes & Footwear Sourcing from China | MASA",
+    metaTitle: "Shoes & Footwear Sourcing from China",
     summary:
       "Seasonal, lifestyle and children-oriented footwear sourcing coordination.",
     intro: [
@@ -172,7 +172,7 @@ export const productCategories = [
   {
     slug: "paper-items",
     name: "Paper Items",
-    metaTitle: "Paper Items & Stationery Sourcing | MASA",
+    metaTitle: "Paper Items & Stationery Sourcing",
     summary:
       "Paper-based products, packaging and stationery support for lifestyle ranges.",
     intro: [
@@ -186,7 +186,7 @@ export const productCategories = [
   {
     slug: "home-deco",
     name: "Home Deco",
-    metaTitle: "Home Decoration Products Sourcing | MASA",
+    metaTitle: "Home Decoration Products Sourcing",
     summary:
       "Home decoration and lifestyle products for retail, promotional and private label programs.",
     intro: [
@@ -201,7 +201,7 @@ export const productCategories = [
   {
     slug: "umbrella",
     name: "Umbrella",
-    metaTitle: "Umbrella Sourcing & Manufacturing in China | MASA",
+    metaTitle: "Umbrella Sourcing & Manufacturing in China",
     summary:
       "Umbrella and weather protection sourcing for retail, promotional and seasonal programs.",
     intro: [
@@ -215,7 +215,7 @@ export const productCategories = [
   {
     slug: "pet",
     name: "Pet",
-    metaTitle: "Pet Products Sourcing from China | MASA",
+    metaTitle: "Pet Products Sourcing from China",
     summary:
       "Pet furniture, beds, apparel, bags, accessories and toy sourcing for pet brands and retail programs.",
     intro: [

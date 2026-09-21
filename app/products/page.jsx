@@ -2,9 +2,12 @@ import { CategoryNav, Page, PageHero, ProductGrid } from "../components";
 import { pageHeroProductImage } from "../site-data";
 
 export const metadata = {
-  title: "Product Sourcing Categories from China | MASA",
+  title: "Product Sourcing Categories from China",
   description:
-    "Explore MASA sourcing categories: toys, pet products, sunglasses, umbrellas, shoes, home textile, sporting goods, paper items and home decor, all from audited Chinese factories."
+    "Explore MASA sourcing categories: toys, pet products, sunglasses, umbrellas, shoes, home textile, sporting goods, paper items and home decor, all from audited Chinese factories.",
+  alternates: {
+    canonical: "https://www.masadvp.com/products"
+  }
 };
 
 export default function ProductsPage() {

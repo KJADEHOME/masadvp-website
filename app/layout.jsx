@@ -18,9 +18,6 @@ export const metadata = {
     "global sourcing",
     "Shanghai sourcing"
   ],
-  alternates: {
-    canonical: "/"
-  },
   openGraph: {
     title: "MASA Development International Limited",
     description:

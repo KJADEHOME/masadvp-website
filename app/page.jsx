@@ -12,7 +12,10 @@ export const metadata = {
     "product sourcing",
     "B2B sourcing",
     "Shanghai sourcing"
-  ]
+  ],
+  alternates: {
+    canonical: "https://www.masadvp.com"
+  }
 };
 
 export default function HomePage() {

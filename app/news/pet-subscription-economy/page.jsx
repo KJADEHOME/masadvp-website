@@ -2,7 +2,7 @@ import { Page, PageHero } from "../../components";
 import { pageHeroNewsImage, siteUrl } from "../../site-data";
 
 export const metadata = {
-  title: "Pet Demand Is Now Subscription Infrastructure | MASA Insights",
+  title: "Pet Demand Is Now Subscription Infrastructure",
   description:
     "Chewy's 84.6% Autoship revenue share and Golden Pet Brands' $1B+ IPO plan show how subscription-driven pet brands are changing what suppliers must deliver. Sourcing insights for pet brands and retail buyers.",
   alternates: {
