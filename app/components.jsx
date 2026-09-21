@@ -97,11 +97,12 @@ export function ProductGrid() {
       {productCategories.map((category) => {
         const card = (
           <>
-            <div
+            <img
               className="product-card-image"
-              style={{ "--image": `url(${category.image})` }}
-              role="img"
-              aria-label={`${category.name} product category`}
+              src={category.image}
+              alt={`${category.name} product category`}
+              loading="lazy"
+              decoding="async"
             />
             <div className="product-card-body">
               <h3>{category.name}</h3>

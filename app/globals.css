@@ -645,10 +645,13 @@ h2 {
 }
 
 .product-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
-  background: var(--image);
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  align-self: start;
 }
 
 .product-card-body {
