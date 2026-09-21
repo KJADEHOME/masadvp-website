@@ -92,6 +92,38 @@ select {
   min-height: 56px;
 }
 
+.not-found {
+  padding: 96px 0 110px;
+}
+
+.not-found h1 {
+  font-size: 2.2rem;
+  margin: 10px 0 18px;
+  color: #242424;
+}
+
+.not-found .lead {
+  max-width: 640px;
+}
+
+.not-found-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 28px 0 34px;
+}
+
+.not-found-links a {
+  color: #0f4c81;
+  font-weight: 600;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .category-feature-image {
   min-height: 344px;
   background: #f7f7f8 var(--image);
