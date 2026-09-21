@@ -7,6 +7,23 @@ export const metadata = {
     "Chewy's 84.6% Autoship revenue share and Golden Pet Brands' $1B+ IPO plan show how subscription-driven pet brands are changing what suppliers must deliver. Sourcing insights for pet brands and retail buyers.",
   alternates: {
     canonical: `${siteUrl}/news/pet-subscription-economy`
+  },
+  openGraph: {
+    title: "Pet Demand Is Now Subscription Infrastructure | MASA Insights",
+    description:
+      "Why 84.6% of Chewy's sales on Autoship and a $1B pet brand IPO change what suppliers must deliver: small-batch, fast-turn, brand-sensitive production.",
+    url: `${siteUrl}/news/pet-subscription-economy`,
+    siteName: "MASA Development International",
+    type: "article",
+    locale: "en_US",
+    images: [
+      {
+        url: `${siteUrl}/assets/news-pet-subscription.jpg`,
+        width: 1000,
+        height: 653,
+        alt: "Dogs playing with rope pet toys in a garden"
+      }
+    ]
   }
 };
 

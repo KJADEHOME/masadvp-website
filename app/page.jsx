@@ -15,6 +15,24 @@ export const metadata = {
   ],
   alternates: {
     canonical: "https://www.masadvp.com"
+  },
+  openGraph: {
+    title:
+      "MASA | Toy, Home Textile, Pet & Lifestyle Product Sourcing from China",
+    description:
+      "Sourcing partner since 2008. Toys, home textile, pet products, sunglasses, umbrellas and lifestyle goods from audited Chinese factories, with OEM/ODM support.",
+    url: "https://www.masadvp.com",
+    siteName: "MASA Development International",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://www.masadvp.com/assets/og-masa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MASA Development International - product sourcing from China since 2008"
+      }
+    ]
   }
 };
 
