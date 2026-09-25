@@ -139,6 +139,33 @@ select {
   align-content: start;
 }
 
+/* Grouped galleries. Categories whose range covers several product families
+   (currently Pet) render one wrapper per family; each wrapper spans the full
+   grid width and opens its own three-column grid for the tiles inside. */
+.category-product-group {
+  grid-column: 1 / -1;
+}
+
+.category-product-group + .category-product-group {
+  margin-top: 18px;
+}
+
+.category-product-group-title {
+  margin: 0 0 14px;
+  padding: 0 0 10px;
+  border-bottom: 2px solid var(--masa-blue);
+  color: var(--masa-ink);
+  font-size: clamp(1.1rem, 1.5vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.category-product-group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(175px, 1fr));
+  gap: 20px;
+  align-content: start;
+}
+
 .category-product-tile {
   min-height: 180px;
   background: #fff;
@@ -1063,4 +1090,14 @@ p.page-hero-title {
 .faq-item p {
   line-height: 1.7;
   color: #4b4f5a;
+}
+
+/* The category galleries were fixed at three columns with a 175px minimum,
+   which overflows narrow screens. Step down to two columns below 900px. */
+@media (max-width: 900px) {
+  .category-product-gallery,
+  .category-product-group-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 14px;
+  }
 }

@@ -83,14 +83,69 @@ const umbrellaImages = [
   "umbrella-13.jpg","umbrella-14.jpg","umbrella-15.jpg"
 ];
 
-const petImages = [
-  "pet-01.jpg","pet-02.jpg","pet-03.jpg","pet-04.jpg","pet-05.jpg","pet-06.jpg",
-  "pet-07.jpg","pet-08.jpg","pet-09.jpg","pet-10.jpg","pet-11.jpg","pet-12.jpg",
-  "pet-13.jpg","pet-14.jpg","pet-15.jpg","pet-16.jpg","pet-17.jpg","pet-18.jpg",
-  "pet-19.jpg","pet-20.jpg","pet-21.jpg","pet-22.jpg","pet-23.jpg","pet-24.jpg",
-  "pet-25.jpg","pet-26.jpg","pet-27.jpg","pet-28.jpg","pet-29.jpg","pet-30.jpg",
-  "pet-31.jpg","pet-32.jpg","pet-33.jpg","pet-34.jpg"
+const petBedImages = [
+  "pet-bed-01.jpg","pet-bed-02.jpg","pet-bed-03.jpg",
+  "pet-bed-04.jpg","pet-bed-05.jpg","pet-bed-06.jpg"
 ];
+
+const petPlushToyImages = [
+  "pet-toy-01.jpg","pet-toy-02.jpg","pet-toy-03.jpg","pet-toy-04.jpg","pet-toy-05.jpg",
+  "pet-toy-06.jpg","pet-toy-07.jpg","pet-toy-08.jpg","pet-toy-09.jpg","pet-toy-10.jpg"
+];
+
+const petDiaperImages = [
+  "pet-diaper-01.jpg","pet-diaper-02.jpg","pet-diaper-03.jpg",
+  "pet-diaper-04.jpg","pet-diaper-05.jpg"
+];
+
+const petScoopImages = [
+  "pet-scoop-01.jpg","pet-scoop-02.jpg","pet-scoop-03.jpg","pet-scoop-04.jpg"
+];
+
+// The pet range now covers five distinct product families, so the gallery is
+// split into groups. Group headings render as h2 inside the category page.
+const petProductGroupSpec = [
+  {
+    heading: "Cat Trees & Cat Furniture",
+    images: ["pet-02.jpg","pet-03.jpg","pet-04.jpg","pet-05.jpg","pet-06.jpg","pet-07.jpg",
+      "pet-08.jpg","pet-09.jpg","pet-10.jpg","pet-11.jpg","pet-12.jpg"]
+  },
+  {
+    heading: "Pet Beds & Mats",
+    images: ["pet-13.jpg"].concat(petBedImages)
+  },
+  {
+    heading: "Plush, Squeaky & Cat Toys",
+    images: ["pet-01.jpg","pet-24.jpg","pet-25.jpg","pet-26.jpg","pet-27.jpg","pet-28.jpg",
+      "pet-29.jpg","pet-30.jpg","pet-31.jpg","pet-32.jpg","pet-33.jpg","pet-34.jpg"]
+      .concat(petPlushToyImages)
+  },
+  {
+    heading: "Washable Pet Sanitary Pants",
+    images: petDiaperImages
+  },
+  {
+    heading: "Pet Waste Scoops",
+    images: petScoopImages
+  },
+  {
+    heading: "Carriers, Crates & Travel",
+    images: ["pet-21.jpg","pet-22.jpg","pet-23.jpg"]
+  },
+  {
+    heading: "Collars, Leads & Walking Gear",
+    images: ["pet-14.jpg","pet-15.jpg","pet-16.jpg","pet-17.jpg"]
+  },
+  {
+    heading: "Pet Apparel & Footwear",
+    images: ["pet-18.jpg","pet-19.jpg","pet-20.jpg"]
+  }
+];
+
+const petProductImages = petProductGroupSpec.reduce(
+  (all, group) => all.concat(group.images),
+  []
+);
 
 function makeProducts(imageFiles, label) {
   return imageFiles.map((file) => {
@@ -225,12 +280,23 @@ export const productCategories = [
     summary:
       "Pet furniture, beds, apparel, bags, accessories and toy sourcing for pet brands and retail programs.",
     intro: [
-      "Pet products are one of our fastest-growing sourcing categories. MASA helps pet brands, pet shops and retail chains source cat trees and cat furniture, pet beds, pet apparel, pet carrier bags, collars and harnesses, feeding accessories and pet toys from vetted factories in Zhejiang and Shandong.",
+      "Pet products are one of our fastest-growing sourcing categories. MASA helps pet brands, pet shops and retail chains source cat trees and cat furniture, pet beds and mats, plush and novelty pet toys, washable pet sanitary pants, waste scoops, pet apparel, carrier bags, and collars and harnesses from vetted factories in Zhejiang and Shandong.",
       "We coordinate plush and wooden cat tree development, fabric and filling selection, strength and safety testing, private label branding and retail-ready packaging. Whether you are launching an own-brand pet collection or expanding a seasonal pet toy range, our Shanghai and Yiwu teams manage sampling, pricing, compliance and production follow-up from brief to shipment."
     ],
     image: "/assets/pet-cover.jpg",
-    subcategories: ["Cat Tree", "Pet Bed", "Pet Apparel", "Pet Accessories", "Pet Bag", "Pet Toy"],
-    products: makeProducts(petImages, "Pet")
+    subcategories: [
+      "Cat Tree",
+      "Pet Bed",
+      "Pet Sanitary Pants",
+      "Pet Toy",
+      "Pet Waste Scoop",
+      "Pet Apparel"
+    ],
+    products: makeProducts(petProductImages, "Pet"),
+    productGroups: petProductGroupSpec.map((group) => ({
+      heading: group.heading,
+      products: makeProducts(group.images, "Pet")
+    }))
   }
 ];
 

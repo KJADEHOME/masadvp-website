@@ -29,6 +29,21 @@ export async function generateMetadata({ params }) {
   };
 }
 
+function ProductTiles({ items, categoryName }) {
+  return items.map((item) => (
+    <div className="category-product-tile" key={item.image}>
+      <img
+        className="category-product-image"
+        src={item.image}
+        alt={item.alt || `${item.name} - ${categoryName} product`}
+        loading="lazy"
+        decoding="async"
+      />
+      <div className="category-product-name">{item.name}</div>
+    </div>
+  ));
+}
+
 export default async function CategoryPage({ params }) {
   const resolvedParams = await params;
   const category = productCategories.find(
@@ -106,18 +121,24 @@ export default async function CategoryPage({ params }) {
           </aside>
 
           <section className="category-product-gallery">
-            {category.products.map((item) => (
-              <div className="category-product-tile" key={item.image}>
-                <img
-                  className="category-product-image"
-                  src={item.image}
-                  alt={item.alt || `${item.name} - ${category.name} product`}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="category-product-name">{item.name}</div>
-              </div>
-            ))}
+            {category.productGroups && category.productGroups.length > 0
+              ? category.productGroups.map((group) => (
+                  <div className="category-product-group" key={group.heading}>
+                    <h2 className="category-product-group-title">
+                      {group.heading}
+                    </h2>
+                    <div className="category-product-group-grid">
+                      <ProductTiles
+                        items={group.products}
+                        categoryName={category.name}
+                      />
+                    </div>
+                  </div>
+                ))
+              : <ProductTiles
+                  items={category.products}
+                  categoryName={category.name}
+                />}
           </section>
         </section>
 

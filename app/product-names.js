@@ -41,6 +41,39 @@ export const productNames = {
   "pet-33.jpg": "Plush Hedgehog Dog Toy",
   "pet-34.jpg": "Spiky Plush Dog Toy",
 
+  // Pet beds and mats
+  "pet-bed-01.jpg": "Foldable Sherpa Pet Mat with Roll Cushion",
+  "pet-bed-02.jpg": "Oxford Pet Bed with Striped WOOF Band",
+  "pet-bed-03.jpg": "Sofa-Style Pet Bed with Bone Applique",
+  "pet-bed-04.jpg": "Bolster Pet Bed with Removable Cushion",
+  "pet-bed-05.jpg": "Contour Memory Foam Pet Lounger",
+  "pet-bed-06.jpg": "Round Cuddle Nest Pet Bed with Sherpa Trim",
+
+  // Plush pet toys
+  "pet-toy-01.jpg": "Plush Pink Squeeze Bottle Dog Toy",
+  "pet-toy-02.jpg": "Plush Fried Chicken Box Dog Toy with Drumstick",
+  "pet-toy-03.jpg": "Plush Soap Pump Bottle Dog Toy",
+  "pet-toy-04.jpg": "Plush Mailbox Dog Toy with Heart Cut-Out",
+  "pet-toy-05.jpg": "Plush Pinata Rooster Dog Toy",
+  "pet-toy-06.jpg": "Christmas Reindeer in Bucket Plush Dog Toy",
+  "pet-toy-07.jpg": "Plush Taco Dog Toy with Crinkle Wrap",
+  "pet-toy-08.jpg": "Plush Vanilla Ice Cream Cup Dog Toy",
+  "pet-toy-09.jpg": "Plush Hermit Crab in Barrel Dog Toy",
+  "pet-toy-10.jpg": "Plush Fried Chicken Box Dog Toy with Chicken Wing",
+
+  // Washable pet sanitary pants
+  "pet-diaper-01.jpg": "Washable Pet Sanitary Pants, Grey Chevron with Cream Pad",
+  "pet-diaper-02.jpg": "Washable Pet Sanitary Pants, Grey Chevron with Navy Pad",
+  "pet-diaper-03.jpg": "Washable Pet Sanitary Pants, Blue Chevron Print",
+  "pet-diaper-04.jpg": "Washable Pet Sanitary Pants, Pink Chevron Print",
+  "pet-diaper-05.jpg": "Washable Pet Sanitary Pants, Floral Print",
+
+  // Pet waste scoops
+  "pet-scoop-01.jpg": "Long-Handle Pet Waste Scoop with Spring Grip",
+  "pet-scoop-02.jpg": "Long-Handle Pet Waste Scoop, Blue Grip",
+  "pet-scoop-03.jpg": "Retail-Ready Pet Waste Scoop with Hang Tag",
+  "pet-scoop-04.jpg": "Folding Travel Pet Waste Scoop in Retail Box",
+
   // Sunglasses & ski goggles
   "sunglasses-01.jpg": "Cylindrical Ski Goggle with Red Mirror Lens",
   "sunglasses-02.jpg": "Frameless Ski Goggles with Carry Case",

@@ -6,6 +6,13 @@ export const categoryContent = {
   pet: {
     sections: [
       {
+        heading: "The Eight Product Families in the Pet Range",
+        paragraphs: [
+          "The pet range is organised into eight families so a buyer can see where a programme would start. Cat furniture and cat trees are board-led and carton-heavy, which makes container planning part of the quotation rather than an afterthought. Pet beds and mats sit on fabric and filling instead: the outer is usually a printed oxford or a plush, the filling polyester fibre or a foam core, and the underside a non-slip base layer.",
+          "Plush and novelty toys are sewing-led, so minimums are lower and development is faster, and the squeaker or crinkle film inside decides much of the safety testing rather than the outer fabric. Washable sanitary pants are a textile product with an absorbent middle layer and an elasticated waist, quoted by waist measurement and pad size. Waste scoops are a hardgood quoted in PP or ABS, where handle length and bag compatibility are confirmed against the bag the buyer already stocks."
+        ]
+      },
+      {
         heading: "Cat Trees and Cat Furniture: Where the Engineering Sits",
         paragraphs: [
           "Cat furniture is the most engineering-heavy item in the pet range. Board grade decides whether a tall tower survives an adult cat landing on the top platform, so load-bearing panels are quoted in 15 mm or 18 mm particle board or plywood, with edge banding rather than raw edges, because raw edges swell in a humid warehouse and tear the wrap.",
@@ -64,6 +71,14 @@ export const categoryContent = {
       {
         q: "How long does sampling take?",
         a: "A first counter-sample normally takes two to three weeks, followed by a revised sample after buyer comments and then pre-production samples. Custom moulds and new tooling add their own lead time and are quoted separately."
+      },
+      {
+        q: "Can washable pet sanitary pants be produced in our own sizes and prints?",
+        a: "Yes. Waist measurement, pad size, elastic tension and print artwork are buyer-specified, and a graded size run is agreed at sample stage. Because the absorbent middle layer is the functional part of the product, its weight and composition are quoted separately instead of being left to the factory default."
+      },
+      {
+        q: "How are pet waste scoops specified?",
+        a: "The scoop is quoted in PP or ABS, with the bag grip sized to the pickup bag format the buyer already uses. Handle length runs from compact folding versions for travel to long-handle models, and colour is fixed with the mould so it does not drift between production runs."
       }
     ],
     related: [
