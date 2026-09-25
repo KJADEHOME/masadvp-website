@@ -58,7 +58,7 @@ export function Footer() {
           </small>
         </div>
         <div className="footer-contact">
-          <p>Email: <a href="mailto:services@masadvp.com">services@masadvp.com</a></p>
+          <p>Email: <a href="mailto:service@masadvp.com">service@masadvp.com</a></p>
           <p>We respond to B2B inquiries within 24 hours.</p>
         </div>
       </div>

@@ -23,6 +23,6 @@ Set these Vercel environment variables before production launch:
 
 ```bash
 RESEND_API_KEY=
-CONTACT_TO_EMAIL=services@masadvp.com
+CONTACT_TO_EMAIL=service@masadvp.com
 CONTACT_FROM_EMAIL=MASA Website <noreply@masadvp.com>
 ```

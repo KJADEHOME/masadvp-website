@@ -60,7 +60,7 @@ const organizationJsonLd = {
   name: "MASA Development International Limited",
   url: siteUrl,
   logo: `${siteUrl}/assets/masa-logo.svg`,
-  email: "services@masadvp.com",
+  email: "service@masadvp.com",
   foundingDate: "2008",
   description:
     "Global sourcing for toys, home textile, pet products and lifestyle items with compliant supplier resources.",

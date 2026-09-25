@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "How do I get a quotation?",
-    a: "Email services@masadvp.com or use the inquiry form with your product requirements, target quantity, target market and compliance needs. Our team aims to respond within 24 hours with pricing and lead time."
+    a: "Email service@masadvp.com or use the inquiry form with your product requirements, target quantity, target market and compliance needs. Our team aims to respond within 24 hours with pricing and lead time."
   },
   {
     q: "Can you consolidate different products into one shipment?",
@@ -65,7 +65,7 @@ export default function ContactPage() {
               <div className="contact-list">
                 <p>MASA Development International Limited</p>
                 <p>
-                  Email: <a href="mailto:services@masadvp.com">services@masadvp.com</a>
+                  Email: <a href="mailto:service@masadvp.com">service@masadvp.com</a>
                 </p>
                 <p>
                   For B2B inquiries, please email your product requirements,

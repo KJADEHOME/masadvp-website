@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p>
               To request correction or deletion of inquiry information, please
-              contact services@masadvp.com.
+              contact service@masadvp.com.
             </p>
           </div>
         </section>
