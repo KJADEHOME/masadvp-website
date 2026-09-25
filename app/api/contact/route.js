@@ -17,14 +17,18 @@ export async function POST(request) {
   }
 
   // Forward to FormSubmit (no API key required; one-time activation email
-  // is sent to CONTACT_INBOX on first submission).
+  // is sent to CONTACT_INBOX on first submission). FormSubmit requires an
+  // Origin/Referer header and reports success in the JSON body, not the
+  // HTTP status code.
   const response = await fetch(
     "https://formsubmit.co/ajax/" + CONTACT_INBOX,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
+        Origin: "https://www.masadvp.com",
+        Referer: "https://www.masadvp.com/contact"
       },
       body: JSON.stringify({
         _subject: "New MASA inquiry from " + clean(data.name),
@@ -40,7 +44,8 @@ export async function POST(request) {
     }
   );
 
-  if (!response.ok) {
+  const result = await response.json().catch(() => null);
+  if (!response.ok || !result || result.success !== "true") {
     return NextResponse.json(
       {
         message:
