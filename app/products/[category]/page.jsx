@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { CategoryNav, Page } from "../../components";
 import { productCategories, siteUrl } from "../../site-data";
 
@@ -29,9 +30,13 @@ export async function generateMetadata({ params }) {
 
 export default async function CategoryPage({ params }) {
   const resolvedParams = await params;
-  const category =
-    productCategories.find((item) => item.slug === resolvedParams.category) ||
-    productCategories[0];
+  const category = productCategories.find(
+    (item) => item.slug === resolvedParams.category
+  );
+
+  if (!category) {
+    notFound();
+  }
 
   return (
     <Page active="Product">

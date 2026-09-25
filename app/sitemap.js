@@ -1,7 +1,22 @@
-import { productCategories, siteUrl } from "./site-data";
+import { newsItems, productCategories, siteUrl } from "./site-data";
+
+const pageUpdated = {
+  "": "2026-09-20",
+  "/about": "2026-09-20",
+  "/products": "2026-09-20",
+  "/news": "2026-09-22",
+  "/contact": "2026-09-20",
+  "/privacy-policy": "2026-09-20"
+};
+
+const defaultUpdated = "2026-09-20";
 
 export default function sitemap() {
-  const now = new Date();
+  const articleDates = {};
+  newsItems.forEach((item) => {
+    if (item.href && item.date) articleDates[item.href] = item.date;
+  });
+
   const staticRoutes = [
     "",
     "/about",
@@ -20,7 +35,9 @@ export default function sitemap() {
 
   return [...staticRoutes, ...productRoutes].map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: now,
+    lastModified: new Date(
+      articleDates[route] || pageUpdated[route] || defaultUpdated
+    ),
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7
   }));
