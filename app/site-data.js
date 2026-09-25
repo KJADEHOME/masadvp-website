@@ -321,11 +321,19 @@ export const capabilities = [
 
 export const newsItems = [
   {
+    title: "Pet Exports to the U.S. Turned Positive. The Price Didn't.",
+    date: "2026-09-25",
+    excerpt:
+      "August customs data gave pet exports their first positive U.S. month under the new tariff structure, with volume up 29.6% and the average export price down 10.0%. What the split means for quoting and order timing.",
+    featured: true,
+    image: "/assets/news-pet-exports-price.jpg",
+    href: "/news/pet-exports-us-tariff-price"
+  },
+  {
     title: "Pet Demand Is Now Subscription Infrastructure",
     date: "2026-09-09",
     excerpt:
       "Chewy's 84.6% Autoship share and Golden Pet Brands' $1B+ IPO plan point to the same shift: the next generation of pet brands buys differently. What it means for suppliers.",
-    featured: true,
     image: "/assets/news-pet-subscription.jpg",
     href: "/news/pet-subscription-economy"
   },

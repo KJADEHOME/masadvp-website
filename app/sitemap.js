@@ -4,7 +4,7 @@ const pageUpdated = {
   "": "2026-09-20",
   "/about": "2026-09-20",
   "/products": "2026-09-20",
-  "/news": "2026-09-22",
+  "/news": "2026-09-25",
   "/contact": "2026-09-20",
   "/privacy-policy": "2026-09-20"
 };
@@ -23,6 +23,7 @@ export default function sitemap() {
     "/products",
     "/news",
     "/news/pet-subscription-economy",
+    "/news/pet-exports-us-tariff-price",
     "/news/china-supplier-verification",
     "/news/cat-tree-sourcing-from-china",
     "/news/pet-brands-small-batch-manufacturing",
