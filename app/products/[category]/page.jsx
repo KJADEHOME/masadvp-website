@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CategoryNav, Page } from "../../components";
 import { productCategories, siteUrl } from "../../site-data";
+import { categoryContent } from "../../category-content";
 
 export function generateStaticParams() {
   return productCategories.map((category) => ({ category: category.slug }));
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }) {
 
   if (!category) {
     return {
-      title: "Product Category"
+      title: "Page not found"
     };
   }
 
@@ -38,8 +39,54 @@ export default async function CategoryPage({ params }) {
     notFound();
   }
 
+  const content = categoryContent[category.slug];
+  const canonical = `${siteUrl}/products/${category.slug}`;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Product",
+        item: `${siteUrl}/products`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: category.name,
+        item: canonical
+      }
+    ]
+  };
+
+  const faqJsonLd =
+    content && content.faqs && content.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: content.faqs.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a }
+          }))
+        }
+      : null;
+
   return (
     <Page active="Product">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {faqJsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      ) : null}
       <main className="category-page-layout">
         <section className="category-page-top">
           <CategoryNav />
@@ -53,18 +100,18 @@ export default async function CategoryPage({ params }) {
                 className="category-feature-image"
                 style={{ "--image": `url(${category.image})` }}
                 role="img"
-                aria-label={`${category.name} feature image`}
+                aria-label={`${category.name} sourcing category`}
               />
             </div>
           </aside>
 
           <section className="category-product-gallery">
             {category.products.map((item) => (
-              <div className="category-product-tile" key={item.name}>
+              <div className="category-product-tile" key={item.image}>
                 <img
                   className="category-product-image"
                   src={item.image}
-                  alt={`${item.name} - ${category.name} product sample`}
+                  alt={item.alt || `${item.name} - ${category.name} product`}
                   loading="lazy"
                   decoding="async"
                 />
@@ -81,6 +128,57 @@ export default async function CategoryPage({ params }) {
               {category.intro.map((paragraph) => (
                 <p key={paragraph.slice(0, 40)}>{paragraph}</p>
               ))}
+            </div>
+          </section>
+        ) : null}
+
+        {content && content.sections ? (
+          <section className="section">
+            <div className="content-width category-intro">
+              {content.sections.map((block) => (
+                <div key={block.heading}>
+                  <h2>{block.heading}</h2>
+                  {block.paragraphs.map((paragraph) => (
+                    <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        {content && content.faqs && content.faqs.length > 0 ? (
+          <section className="section alt">
+            <div className="content-width">
+              <h2>{category.name} Sourcing Questions</h2>
+              <div className="faq-list">
+                {content.faqs.map((item) => (
+                  <div className="faq-item" key={item.q}>
+                    <h3>{item.q}</h3>
+                    <p>{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {content && content.related && content.related.length > 0 ? (
+          <section className="section">
+            <div className="content-width category-intro">
+              <h2>Related Reading</h2>
+              <ul>
+                {content.related.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/contact">
+                    Send us your specification for a quotation
+                  </Link>
+                </li>
+              </ul>
             </div>
           </section>
         ) : null}

@@ -1,3 +1,5 @@
+import { productNames } from "./product-names";
+
 export const siteUrl = "https://www.masadvp.com";
 
 export const navItems = [
@@ -91,11 +93,15 @@ const petImages = [
 ];
 
 function makeProducts(imageFiles, label) {
-  return imageFiles.map((file, index) => ({
-    name: `${label} ${index + 1}`,
-    image: `/assets/${file}`,
-    detail: `${label} product sample ${index + 1}.`
-  }));
+  return imageFiles.map((file) => {
+    const name = productNames[file] || `${label} Product`;
+    return {
+      name,
+      image: `/assets/${file}`,
+      alt: `${name} - ${label} product sample sourced from China`,
+      detail: `${name}, supplied for wholesale and private label programmes.`
+    };
+  });
 }
 
 export const productCategories = [
