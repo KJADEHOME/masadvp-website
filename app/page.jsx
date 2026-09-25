@@ -3,15 +3,21 @@ import { Header, Footer, ProductGrid } from "./components";
 import { capabilities } from "./site-data";
 
 export const metadata = {
-  title: "MASA Development International Limited",
+  title: {
+    absolute:
+      "China Sourcing Company for Toy, Home Textile & Lifestyle | MASA"
+  },
   description:
-    "Global sourcing for toys, home textile and lifestyle products with compliant supplier resources and responsive customer support.",
+    "MASA Development International is a China sourcing company serving retailers, importers and brands since 2008. Toy, home textile, pet, sunglasses, umbrella and lifestyle product sourcing from audited factories, with OEM/ODM and compliance support.",
   keywords: [
-    "toy sourcing",
+    "china sourcing company",
+    "sourcing company in china",
+    "toy sourcing china",
     "home textile sourcing",
-    "product sourcing",
-    "B2B sourcing",
-    "Shanghai sourcing"
+    "pet product sourcing",
+    "OEM ODM china",
+    "Shanghai sourcing office",
+    "Yiwu sourcing agent"
   ],
   alternates: {
     canonical: "https://www.masadvp.com"

@@ -258,22 +258,25 @@ export const newsItems = [
     href: "/news/pet-subscription-economy"
   },
   {
-    title: "Product Sourcing Support for Global Lifestyle Programs",
-    date: "2026-08-03",
+    title: "How to Verify a Chinese Supplier Before You Place an Order",
+    date: "2026-09-22",
     excerpt:
-      "MASA continues to support toy, home textile and home lifestyle product development for international customers."
+      "Licence checks, certificate verification at the issuing body, factory versus trading company, and the payment red flags that precede most quality disputes.",
+    href: "/news/china-supplier-verification"
   },
   {
-    title: "Compliance-Focused Supplier Coordination",
-    date: "2026-07-18",
+    title: "Sourcing Cat Trees from China: A Buyer's Guide for Pet Brands",
+    date: "2026-09-22",
     excerpt:
-      "Factory compliance resources remain an important part of MASA's sourcing and supplier communication process."
+      "Board grade, sisal specification, tip-over stability and carton dimensions: the four decisions that decide whether a cat furniture programme makes money.",
+    href: "/news/cat-tree-sourcing-from-china"
   },
   {
-    title: "New Website Experience in Development",
-    date: "2026-07-10",
+    title: "What Subscription Pet Brands Need from a Manufacturing Partner",
+    date: "2026-09-22",
     excerpt:
-      "MASA is preparing a refreshed website with clearer product categories, inquiry forms and search-friendly structure."
+      "Small batch is a setup-cost problem, not a willingness problem. The three costs that set your MOQ, and the packaging structure that keeps a subscription range fresh.",
+    href: "/news/pet-brands-small-batch-manufacturing"
   }
 ];
 

@@ -35,17 +35,23 @@ export default function PetSubscriptionArticlePage() {
           title="News"
           breadcrumb="Home - News"
           image={pageHeroNewsImage}
+          titleTag="p"
         />
         <section className="section">
           <div className="content-width article-layout">
             <article className="article-body">
               <p className="eyebrow">Market Insight - September 9, 2026</p>
               <h1>Pet Demand Is Now Subscription Infrastructure</h1>
-              <div
-                className="article-image"
-                role="img"
-                aria-label="Dogs playing with rope pet toys in a garden"
-              />
+              <figure className="article-figure">
+                <img
+                  src="/assets/news-pet-subscription.jpg"
+                  alt="Dogs playing with rope pet toys in a garden"
+                  width="1000"
+                  height="653"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
               <p>
                 84.6% of Chewy&apos;s sales now come from customers who never
                 click &quot;buy&quot; again. Meanwhile, a $1B pet brand many

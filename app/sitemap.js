@@ -8,6 +8,9 @@ export default function sitemap() {
     "/products",
     "/news",
     "/news/pet-subscription-economy",
+    "/news/china-supplier-verification",
+    "/news/cat-tree-sourcing-from-china",
+    "/news/pet-brands-small-batch-manufacturing",
     "/contact",
     "/privacy-policy"
   ];

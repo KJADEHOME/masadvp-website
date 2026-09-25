@@ -76,7 +76,12 @@ export function Page({ active, children }) {
   );
 }
 
-export function PageHero({ title, breadcrumb, image = pageHeroImage }) {
+export function PageHero({
+  title,
+  breadcrumb,
+  image = pageHeroImage,
+  titleTag: TitleTag = "h1"
+}) {
   return (
     <>
       <section
@@ -84,7 +89,7 @@ export function PageHero({ title, breadcrumb, image = pageHeroImage }) {
         style={{ "--image": `url(${image})` }}
         aria-label={title}
       >
-        <h1>{title}</h1>
+        <TitleTag className="page-hero-title">{title}</TitleTag>
       </section>
       <div className="breadcrumb">{breadcrumb}</div>
     </>

@@ -40,6 +40,17 @@ export default function NewsPage() {
                       </div>
                     </a>
                   </article>
+                ) : item.href ? (
+                  <article className="news-card" key={item.title}>
+                    <a className="news-card-link" href={item.href}>
+                      <div className="news-card-body">
+                        <p className="eyebrow">{item.date}</p>
+                        <h3>{item.title}</h3>
+                        <p>{item.excerpt}</p>
+                        <span className="news-card-more">Read the full article &rarr;</span>
+                      </div>
+                    </a>
+                  </article>
                 ) : (
                   <article className="news-card" key={item.title}>
                     <div className="news-card-body">
