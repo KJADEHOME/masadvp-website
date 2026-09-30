@@ -1,4 +1,10 @@
-import { CategoryNav, Page, PageHero, ProductGrid } from "../components";
+import {
+  CategoryNav,
+  Page,
+  PageHero,
+  ProductGrid,
+  StoreBanner
+} from "../components";
 import { pageHeroProductImage } from "../site-data";
 
 export const metadata = {
@@ -32,6 +38,7 @@ export default function ProductsPage() {
               </p>
             </div>
             <CategoryNav />
+            <StoreBanner />
             <ProductGrid />
           </div>
         </section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  alibabaStore,
   footerItems,
   navItems,
   pageHeroImage,
@@ -141,6 +142,39 @@ export function ProductGrid() {
         );
       })}
     </div>
+  );
+}
+
+// One-click route to the Alibaba.com storefront. The whole banner is a single
+// link rather than a heading plus a button, because the buyers who use the
+// store arrive on a phone and a full-width tap target is what they aim at.
+export function StoreBanner() {
+  return (
+    <a
+      className="store-banner"
+      href={alibabaStore.url}
+      target="_blank"
+      rel="noopener"
+      aria-label={`${alibabaStore.bannerHeading} — opens in a new tab`}
+    >
+      <span className="store-banner-logo">
+        <img
+          src={alibabaStore.logo}
+          alt="MASA store logo on Alibaba.com"
+          loading="lazy"
+          decoding="async"
+        />
+      </span>
+      <span className="store-banner-copy">
+        <span className="store-banner-kicker">{alibabaStore.kicker}</span>
+        <strong>{alibabaStore.bannerHeading}</strong>
+        <span className="store-banner-body">{alibabaStore.bannerBody}</span>
+        <span className="store-banner-meta">
+          {alibabaStore.storeName} · {alibabaStore.storeMeta}
+        </span>
+      </span>
+      <span className="store-banner-cta">Visit the store</span>
+    </a>
   );
 }
 

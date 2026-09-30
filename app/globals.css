@@ -1101,3 +1101,284 @@ p.page-hero-title {
     gap: 14px;
   }
 }
+
+/* Marketplace store panel, used on category pages that also run a verified
+   storefront on Alibaba.com. The store is linked rather than embedded: its
+   product list does not reflow into a narrow frame, and its own masthead would
+   stack on top of our header. */
+.store-panel {
+  background: #fff;
+  border: 1px solid rgba(36, 36, 36, 0.12);
+  border-radius: 20px;
+  padding: 30px 30px 26px;
+}
+
+.store-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.store-panel-kicker {
+  margin: 0 0 9px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--masa-olive);
+}
+
+.store-panel-head h2 {
+  margin: 0;
+  max-width: 620px;
+  font-size: clamp(1.4rem, 2.1vw, 2rem);
+  line-height: 1.22;
+}
+
+.store-panel-media {
+  margin-bottom: 22px;
+  border: 1px solid rgba(36, 36, 36, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--masa-soft);
+}
+
+.store-panel-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.store-panel-foot {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.store-panel-foot p {
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+.store-panel-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.store-panel-links a {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid rgba(36, 36, 36, 0.12);
+  border-radius: 999px;
+  background: var(--masa-soft);
+  color: var(--masa-ink);
+  font-size: 0.89rem;
+  text-decoration: none;
+}
+
+.store-panel-links a:hover {
+  border-color: var(--masa-olive);
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .store-panel {
+    padding: 22px 18px 20px;
+    border-radius: 16px;
+  }
+
+  .store-panel-foot {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .store-panel-head .button.primary {
+    min-width: 0;
+  }
+}
+
+.store-panel-id {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.store-panel-logo {
+  width: 148px;
+  height: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.store-panel-shop {
+  margin: 8px 0 0;
+  color: #6b6b6b;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* The storefront screenshot is itself the link, so the panel has a second
+   full-size tap target next to the button. */
+.store-panel-media {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.store-panel-media img {
+  transition: transform 0.45s ease;
+}
+
+.store-panel-media:hover img,
+.store-panel-media:focus-visible img {
+  transform: scale(1.015);
+}
+
+.store-panel-media-cta {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(36, 36, 36, 0.82);
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.store-panel-media:hover .store-panel-media-cta,
+.store-panel-media:focus-visible .store-panel-media-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* One-click store entry above the product grid: the whole banner is a single
+   link, so the inner elements are spans with block display. */
+.store-banner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 42px;
+  padding: 22px 26px;
+  border: 1px solid var(--masa-line);
+  border-radius: 18px;
+  background: var(--masa-soft);
+  color: var(--masa-ink);
+  text-decoration: none;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease,
+    transform 0.22s ease, background 0.22s ease;
+}
+
+.store-banner:hover,
+.store-banner:focus-visible {
+  border-color: var(--masa-olive);
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(36, 36, 36, 0.12);
+  transform: translateY(-2px);
+}
+
+.store-banner-logo img {
+  width: 132px;
+  height: auto;
+  display: block;
+}
+
+.store-banner-copy {
+  display: block;
+  min-width: 0;
+}
+
+.store-banner-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--masa-olive);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.store-banner-copy strong {
+  display: block;
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
+.store-banner-body {
+  display: block;
+  margin-top: 7px;
+  color: #4a4a4a;
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.store-banner-meta {
+  display: block;
+  margin-top: 8px;
+  color: #6f6f6f;
+  font-size: 0.88rem;
+}
+
+.store-banner-cta {
+  white-space: nowrap;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--masa-ink);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: background 0.22s ease;
+}
+
+.store-banner:hover .store-banner-cta {
+  background: var(--masa-olive);
+}
+
+@media (max-width: 900px) {
+  .store-banner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 20px 18px;
+  }
+
+  .store-banner-cta {
+    justify-self: start;
+  }
+
+  .store-panel-id {
+    align-items: flex-start;
+  }
+
+  .store-panel-logo {
+    width: 108px;
+  }
+}
+
+/* The category layout asked for a 260px sidebar plus a gallery column with a
+   hard 560px minimum, and no breakpoint ever overrode it. Measured on the live
+   page: a 560px viewport rendered a 557px client width with an 877px scroll
+   width, so the whole product wall sat outside the screen and the page scrolled
+   sideways on every tablet and phone. 844px of container is the point where the
+   two columns stop fitting, which lands at a 924px viewport once the 80px of
+   page padding is counted, so collapse just above that. */
+@media (max-width: 940px) {
+  .category-list-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-feature-card {
+    min-height: 300px;
+  }
+}

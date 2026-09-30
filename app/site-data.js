@@ -159,6 +159,61 @@ function makeProducts(imageFiles, label) {
   });
 }
 
+// The MASA sunglasses shop on Alibaba.com. Kept in one place because three
+// surfaces read from it: the store panel on the sunglasses category page, the
+// store banner above the product grid, and the footer of the listing page.
+// Only facts readable on the storefront itself belong here — the store name,
+// the city and the trading year come from the store header, and the "since
+// 2021" line comes from the store's own meta description.
+export const alibabaStore = {
+  kicker: "Alibaba.com store",
+  heading: "The MASA sunglasses store on Alibaba.com",
+  bannerHeading: "Shop MASA on Alibaba.com",
+  bannerBody:
+    "The full sunglasses range is listed with prices and minimum order quantities.",
+  logo: "/assets/alibaba-store-logo.png",
+  storeName: "Masa International Service (sh) Co., Ltd",
+  storeMeta: "Shanghai, China · supplier on Alibaba.com since 2021",
+  body:
+    "Prices, minimum order quantities and lead times for the whole sunglasses range are published on our Alibaba.com store, so buyers can compare models and order directly. Buyers who prefer to work through MASA can send a specification instead — the same product, quoted by our own Shanghai office with sampling, inspection and shipping handled in-house.",
+  image: "/assets/alibaba-sunglasses-store.jpg",
+  url: "https://shmasadvp.en.alibaba.com/",
+  links: [
+    {
+      label: "All products",
+      href: "https://shmasadvp.en.alibaba.com/productlist.html"
+    },
+    {
+      label: "Fashion sunglasses",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-941362074/Fashion_Sunglasses.html"
+    },
+    {
+      label: "Sports sunglasses & ski goggles",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-940848293/Sports_Sunglasses_and_Ski_Goggles.html"
+    },
+    {
+      label: "Kids sunglasses",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-941189514/Kids_Sunglasses.html"
+    },
+    {
+      label: "Party sunglasses",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-941616107/Party_Sunglasses.html"
+    },
+    {
+      label: "Bamboo & wood sunglasses",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-942043588/Bamboo_Wood_Sunglasses.html"
+    },
+    {
+      label: "Optical glasses",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-941712509/Optical_Glasses.html"
+    },
+    {
+      label: "Ready to ship",
+      href: "https://shmasadvp.en.alibaba.com/productgrouplist-942053176/Ready_to_ship_Sunglasses.html"
+    }
+  ]
+};
+
 export const productCategories = [
   {
     slug: "sunglasses",
@@ -172,6 +227,7 @@ export const productCategories = [
     ],
     image: "/assets/sunglasses-cover.jpg",
     subcategories: ["Fashion Sunglasses", "Sport Goggles", "Ski Goggles"],
+    store: alibabaStore,
     products: makeProducts(sunglassesImages, "Sunglasses")
   },
   {

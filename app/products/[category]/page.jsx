@@ -142,6 +142,76 @@ export default async function CategoryPage({ params }) {
           </section>
         </section>
 
+        {category.store ? (
+          <section className="section alt">
+            <div className="content-width">
+              <div className="store-panel">
+                <div className="store-panel-head">
+                  <div className="store-panel-id">
+                    <img
+                      className="store-panel-logo"
+                      src={category.store.logo}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div>
+                      <p className="store-panel-kicker">
+                        {category.store.kicker}
+                      </p>
+                      <h2>{category.store.heading}</h2>
+                      <p className="store-panel-shop">
+                        {category.store.storeName}
+                        <span> · {category.store.storeMeta}</span>
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    className="button primary"
+                    href={category.store.url}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open the store
+                  </a>
+                </div>
+                <a
+                  className="store-panel-media"
+                  href={category.store.url}
+                  target="_blank"
+                  rel="noopener"
+                  aria-label={`Open the MASA ${category.name} store on Alibaba.com in a new tab`}
+                >
+                  <img
+                    src={category.store.image}
+                    alt={`MASA ${category.name} storefront on Alibaba.com`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="store-panel-media-cta">
+                    Open the store ↗
+                  </span>
+                </a>
+                <div className="store-panel-foot">
+                  <p>{category.store.body}</p>
+                  <div className="store-panel-links">
+                    {category.store.links.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {category.intro && category.intro.length > 0 ? (
           <section className="section">
             <div className="content-width category-intro">
