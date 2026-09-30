@@ -174,6 +174,14 @@ export const alibabaStore = {
   logo: "/assets/alibaba-store-logo.png",
   storeName: "Masa International Service (sh) Co., Ltd",
   storeMeta: "Shanghai, China · supplier on Alibaba.com since 2021",
+  // Tenth tile on the /products grid, sitting after Pet. Naming it as a store
+  // rather than a category keeps it honest: the tile leaves the site, while
+  // every other tile opens a MASA category page.
+  cardTitle: "MASA Online Store",
+  cardKicker: "Alibaba.com",
+  cardSummary:
+    "The full sunglasses range, listed on Alibaba.com with prices and minimum order quantities.",
+  cardImage: "/assets/alibaba-store-card.jpg",
   body:
     "Prices, minimum order quantities and lead times for the whole sunglasses range are published on our Alibaba.com store, so buyers can compare models and order directly. Buyers who prefer to work through MASA can send a specification instead — the same product, quoted by our own Shanghai office with sampling, inspection and shipping handled in-house.",
   image: "/assets/alibaba-sunglasses-store.jpg",

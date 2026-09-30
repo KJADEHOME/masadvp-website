@@ -141,6 +141,31 @@ export function ProductGrid() {
           </Link>
         );
       })}
+      {/*
+        Closes the grid after Pet. Deliberately not a productCategories entry:
+        those drive /products/[slug] routes and sitemap.js, and this tile leaves
+        the site for Alibaba.com instead of opening a MASA category page.
+      */}
+      <a
+        className="product-card product-card-store"
+        href={alibabaStore.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${alibabaStore.cardTitle} — opens Alibaba.com in a new tab`}
+      >
+        <img
+          className="product-card-image"
+          src={alibabaStore.cardImage}
+          alt="MASA storefront on Alibaba.com listing sunglasses for sale"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="product-card-body">
+          <span className="product-card-kicker">{alibabaStore.cardKicker}</span>
+          <h3>{alibabaStore.cardTitle}</h3>
+          <p>{alibabaStore.cardSummary}</p>
+        </div>
+      </a>
     </div>
   );
 }

@@ -741,6 +741,16 @@ h2 {
   line-height: 1.55;
 }
 
+/* Tenth tile on the listing grid: a storefront, not a category. The kicker
+   names the destination so the tile does not read as another product line. */
+.product-card-kicker {
+  color: var(--masa-olive);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
